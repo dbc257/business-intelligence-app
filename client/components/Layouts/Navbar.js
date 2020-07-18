@@ -50,12 +50,12 @@ class Navbar extends Component {
                       className="white-logo"
                       alt="logo"
                     />{" "}
+                    <label className="white-logo">BI Cube</label>
                     <img
                       src="/images/logo-white.png"
                       className="black-logo"
                       alt="logo"
-                    />{" "}
-                    BI Cube
+                    />
                   </a>
                 </Link>
 

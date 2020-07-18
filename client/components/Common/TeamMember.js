@@ -20,19 +20,19 @@ class TeamMember extends Component {
                   <div className="team-social">
                     <Link href="//linkedin.com/in/david-c-48287133/">
                       <a target="_blank">
-                        <i class="fab fa-linkedin"></i>
+                        <i className="fab fa-linkedin"></i>
                       </a>
                     </Link>
 
                     <Link href="//github.com/dbc257">
                       <a target="_blank">
-                        <i class="fab fa-github"></i>
+                        <i className="fab fa-github"></i>
                       </a>
                     </Link>
 
                     <Link href="//davidcarlisle.me">
                       <a target="_blank">
-                        <i class="fa fa-link"></i>
+                        <i className="fa fa-link"></i>
                       </a>
                     </Link>
                   </div>
@@ -53,19 +53,19 @@ class TeamMember extends Component {
                   <div className="team-social">
                     <Link href="//linkedin.com/in/victorpetsev/">
                       <a target="_blank">
-                        <i class="fab fa-linkedin"></i>
+                        <i className="fab fa-linkedin"></i>
                       </a>
                     </Link>
 
                     <Link href="//github.com/VPetsev/">
                       <a target="_blank">
-                        <i class="fab fa-github"></i>
+                        <i className="fab fa-github"></i>
                       </a>
                     </Link>
 
                     <Link href="//vpetsev.com">
                       <a target="_blank">
-                        <i class="fa fa-link"></i>
+                        <i className="fa fa-link"></i>
                       </a>
                     </Link>
                   </div>
@@ -86,19 +86,19 @@ class TeamMember extends Component {
                   <div className="team-social">
                     <Link href="//linkedin.com/in/travis-wright-43706b41/">
                       <a target="_blank">
-                        <i class="fab fa-linkedin"></i>
+                        <i className="fab fa-linkedin"></i>
                       </a>
                     </Link>
 
                     <Link href="//github.com/sivart-wright">
                       <a target="_blank">
-                        <i class="fab fa-github"></i>
+                        <i className="fab fa-github"></i>
                       </a>
                     </Link>
 
                     <Link href="//sivart-wright.github.io/portfolio_/">
                       <a target="_blank">
-                        <i class="fa fa-link"></i>
+                        <i className="fa fa-link"></i>
                       </a>
                     </Link>
                   </div>
