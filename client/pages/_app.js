@@ -43,19 +43,19 @@ export default class MyApp extends App {
     return (
       <React.Fragment>
         <Head>
-          <title>Raxr - React Next Data Science & Analytics Template</title>
+          <title>BI Cube - Business Intelligence Cube</title>
           <meta
             name="description"
-            content="Raxr - React Next Data Science & Analytics Template"
+            content="BI Cube - Business Intelligence Cube"
           />
           <meta
             name="og:title"
             property="og:title"
-            content="Raxr - React Next Data Science & Analytics Template"
+            content="BI Cube - Business Intelligence Cube"
           ></meta>
           <meta
             name="twitter:card"
-            content="Raxr - React Next Data Science & Analytics Template"
+            content="BI Cube - Business Intelligence Cube"
           ></meta>
           <link rel="canonical" href="https://raxr-react.envytheme.com/"></link>
         </Head>

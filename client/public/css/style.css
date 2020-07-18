@@ -4032,7 +4032,7 @@ Page Title Area CSS
 .page-title-area {
   position: relative;
   z-index: 1;
-  background-image: url(/images/page-title-bg.jpg);
+  background-image: url(/images/page-title-bg.jpeg);
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -4713,7 +4713,7 @@ Coming Soon Area CSS
   position: relative;
   z-index: 1;
   height: 100vh;
-  background-image: url(/images/page-title-bg.jpg);
+  background-image: url(/images/page-title-bg.jpeg);
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;

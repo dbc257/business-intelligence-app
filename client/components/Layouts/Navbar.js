@@ -49,12 +49,13 @@ class Navbar extends Component {
                       src="/images/logo-white.png"
                       className="white-logo"
                       alt="logo"
-                    />
+                    />{" "}
                     <img
-                      src="/images/logo-black.png"
+                      src="/images/logo-white.png"
                       className="black-logo"
                       alt="logo"
-                    />
+                    />{" "}
+                    BI Cube
                   </a>
                 </Link>
 
@@ -80,10 +81,36 @@ class Navbar extends Component {
                         <a className="nav-link">Home</a>
                       </Link>
                     </li>
-
+                    <li className="nav-item">
+                      <Link href="/explore" activeClassName="active">
+                        <a className="nav-link">Explore</a>
+                      </Link>
+                    </li>
+                    <li className="nav-item">
+                      <Link href="/charts" activeClassName="active">
+                        <a className="nav-link">Charts</a>
+                      </Link>
+                    </li>
                     <li className="nav-item">
                       <Link href="/about-us" activeClassName="active">
-                        <a className="nav-link">About us</a>
+                        <a className="nav-link">About Us</a>
+                      </Link>
+                    </li>
+                    <li className="nav-item">
+                      <Link href="/login" activeClassName="active">
+                        <a className="nav-link">Login</a>
+                      </Link>
+                    </li>
+
+                    <li className="nav-item">
+                      <Link href="/register" activeClassName="active">
+                        <a className="nav-link">Register</a>
+                      </Link>
+                    </li>
+
+                    <li className="nav-item">
+                      <Link href="/signout" activeClassName="active">
+                        <a className="nav-link">Signout</a>
                       </Link>
                     </li>
                   </ul>

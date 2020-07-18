@@ -6,7 +6,7 @@ import FunFacts from "../components/Common/FunFacts";
 import GetStartedProject from "../components/Common/GetStartedProject";
 // import Testimonial from '../components/Common/Testimonial';
 import TeamMember from "../components/Common/TeamMember";
-import Customers from "../components/Common/Customers";
+// import Customers from "../components/Common/Customers";
 import Footer from "../components/Layouts/Footer";
 
 class AboutUs extends Component {
@@ -29,7 +29,7 @@ class AboutUs extends Component {
 
         {/* <Testimonial /> */}
         <TeamMember />
-        <Customers />
+        {/* <Customers /> */}
         <Footer />
       </React.Fragment>
     );
