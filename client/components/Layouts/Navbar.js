@@ -14,6 +14,10 @@ class Navbar extends Component {
     });
   };
   componentDidMount() {
+    //  Does it makes sense to use addevent listener here?
+    //  Even though its part of componentDidMount, this type 
+    //  of DOM manipulation isn't great. 
+    //  How else can the event listener be added?
     let elementId = document.getElementById("navbar");
     document.addEventListener("scroll", () => {
       if (window.scrollY > 170) {

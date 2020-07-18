@@ -8,7 +8,7 @@ class ServicesContent extends Component {
                 <div className="container">
                     <div className="section-title">
                         <span>Our Services</span>
-                        <h2>Expolre Our Data Services</h2>
+                        <h2>Explore Our Data Services</h2>
                     </div>
 
                     <div className="row">

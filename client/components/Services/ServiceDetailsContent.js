@@ -9,7 +9,7 @@ class ServiceDetailsContent extends Component {
                         <div className="row align-items-center">
                             <div className="col-lg-6 col-md-12">
                                 <div className="services-details-desc">
-                                    <h3>Expolre Our Data Services</h3>
+                                    <h3>Explore Our Data Services</h3>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
 
                                     <div className="features-text">
