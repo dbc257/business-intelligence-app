@@ -1,5 +1,8 @@
 import React, { Component } from "react";
 import Link from "../../utils/ActiveLink";
+// import { connect } from "react-redux";
+import { setAuthenticationHeader } from "../../utils/Auth";
+// import * as actionCreators from "../../store/creators/actionCreators";
 
 class Navbar extends Component {
   // Navbar
@@ -8,6 +11,12 @@ class Navbar extends Component {
     display: false,
     collapsed: true,
   };
+  // handleSignOut = () => {
+  //   props.onAuthenticated(false);
+  //   localStorage.removeItem("jsonwebtoken");
+  //   localStorage.removeItem("jwt_access_token");
+  //   setAuthenticationHeader(null);
+  // };
   toggleNavbar = () => {
     this.setState({
       collapsed: !this.state.collapsed,
@@ -49,9 +58,10 @@ class Navbar extends Component {
                       src="/images/logo-white.png"
                       className="white-logo"
                       alt="logo"
-                    />
+                    />{" "}
+                    <label className="white-logo">BI Cube</label>
                     <img
-                      src="/images/logo-black.png"
+                      src="/images/logo-white.png"
                       className="black-logo"
                       alt="logo"
                     />
@@ -80,12 +90,43 @@ class Navbar extends Component {
                         <a className="nav-link">Home</a>
                       </Link>
                     </li>
-
                     <li className="nav-item">
-                      <Link href="/about-us" activeClassName="active">
-                        <a className="nav-link">About us</a>
+                      <Link href="/explore" activeClassName="active">
+                        <a className="nav-link">Explore</a>
                       </Link>
                     </li>
+                    <li className="nav-item">
+                      <Link href="/charts" activeClassName="active">
+                        <a className="nav-link">Charts</a>
+                      </Link>
+                    </li>
+                    <li className="nav-item">
+                      <Link href="/about-us" activeClassName="active">
+                        <a className="nav-link">About Us</a>
+                      </Link>
+                    </li>
+                    <li className="nav-item">
+                      <Link href="/login" activeClassName="active">
+                        <a className="nav-link">Login</a>
+                      </Link>
+                    </li>
+
+                    <li className="nav-item">
+                      <Link href="/register" activeClassName="active">
+                        <a className="nav-link">Register</a>
+                      </Link>
+                    </li>
+
+                    {/* <li className="nav-item">
+                      <Link
+                        href="/signout"
+                        activeClassName="active"
+                        type="button"
+                        onClick={handleSignOut}
+                      >
+                        <a className="nav-link">Signout</a>
+                      </Link>
+                    </li> */}
                   </ul>
                 </div>
               </nav>
@@ -96,5 +137,19 @@ class Navbar extends Component {
     );
   }
 }
+
+// const mapStateToProps = (state) => {
+//   return {
+//     isLoggedIn: state.loginRed.isLoggedIn,
+//   };
+// };
+
+// const mapDispatchToProps = (dispatch) => {
+//   return {
+//     onAuthenticated: (isLoggedIn) =>
+//       dispatch(actionCreators.authenticated(isLoggedIn)),
+//   };
+// };
+// export default connect(mapStateToProps, mapDispatchToProps)(Navbar);
 
 export default Navbar;

@@ -1,14 +1,14 @@
-import React, { Component } from 'react';
-import Link from 'next/link';
+import React, { Component } from "react";
+import Link from "next/link";
 
 class Footer extends Component {
-    render() {
-        let currentYear = new Date().getFullYear();
-        return (
-            <React.Fragment>
-                {/* Top Footer Section */}
-                <footer className="footer-section ptb-100">
-                    <div className="container">
+  render() {
+    let currentYear = new Date().getFullYear();
+    return (
+      <React.Fragment>
+        {/* Top Footer Section */}
+        {/* <footer className="footer-section ptb-100"> */}
+        {/* <div className="container">
                         <div className="row">
                             <div className="col-lg-4 col-md-6 col-sm-6">
                                 <div className="single-footer-widget">
@@ -155,57 +155,49 @@ class Footer extends Component {
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> */}
 
-                    <div className="lines">
-                        <div className="line"></div>
-                        <div className="line"></div>
-                        <div className="line"></div>
-                    </div>
+        {/* <div className="lines">
+            <div className="line"></div>
+            <div className="line"></div>
+            <div className="line"></div>
+          </div>
 
-                    <div className="partner-shape-img1">
-                        <img src="/images/shape/partnar-shape-2.png" alt="image" />
-                    </div>
-                </footer>
-                {/* End Top Footer Section */}
+          <div className="partner-shape-img1">
+            <img src="/images/shape/partnar-shape-2.png" alt="image" />
+          </div>
+        </footer> */}
+        {/* End Top Footer Section */}
 
-                {/* Bottom Footer Section */}
-                <div className="copyright-area">
-                    <div className="container">
-                        <div className="row align-items-center">
-                            <div className="col-lg-6 col-md-6">
-                                <p> 
-                                    &copy; {currentYear} Raxr. All Rights Reserved by
+        {/* Bottom Footer Section */}
+        <div className="copyright-area">
+          <div className="container">
+            <div className="row align-items-center">
+              <div className="col-lg-6 col-md-6">
+                <p>&copy; {currentYear} Business Intelligence Cube</p>
+              </div>
 
-                                    <a href="https://envytheme.com/" target="_blank">
-                                        EnvyTheme
-                                    </a>
-                                </p>
-                            </div>
-
-                            <div className="col-lg-6 col-md-6">
-                                <ul>
-                                    <li>
-                                        <Link href="/terms-condition">
-                                            <a>
-                                                Terms & Conditions
-                                            </a>
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/privacy-policy">
-                                            <a>Privacy Policy</a>
-                                        </Link>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                {/* End Bottom Footer Section */}
-            </React.Fragment>
-        );
-    }
+              {/* <div className="col-lg-6 col-md-6">
+                <ul>
+                  <li>
+                    <Link href="/terms-condition">
+                      <a>Terms & Conditions</a>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/privacy-policy">
+                      <a>Privacy Policy</a>
+                    </Link>
+                  </li>
+                </ul>
+              </div> */}
+            </div>
+          </div>
+        </div>
+        {/* End Bottom Footer Section */}
+      </React.Fragment>
+    );
+  }
 }
 
 export default Footer;

@@ -19,18 +19,18 @@ class MainBanner extends Component {
               <div className="row align-items-center">
                 <div className="col-lg-6 col-md-12">
                   <div className="main-banner-content">
-                    <h1>Applying Data Science & Analytics To Life</h1>
+                    <h1>Applying Business Intelligence To Life</h1>
                     <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                      ullamco laboris nisi ut aliquip.
+                      The Business Intelligence (BI) Cube enables users to build
+                      BI applications by providing capabilities in two
+                      categories: analysis, such as online analytical processing
+                      (OLAP), and information delivery, such as dashboards.
                     </p>
 
                     <div className="banner-btn">
-                      <Link href="/about-us">
+                      <Link href="/explore">
                         <a className="default-btn-one">
-                          About Us <span></span>
+                          Explore <span></span>
                         </a>
                       </Link>
 
