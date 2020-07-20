@@ -120,7 +120,7 @@ router.get("/charts-revenue-fb2017", (req, res) => {
   }).then((result) => res.json(result));
 });
 
-router.get("/charts-fb", (req, res) => {
+router.get("/", (req, res) => {
   models.Company.findAll({
     where: {
       [Op.or]: [
