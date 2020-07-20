@@ -176,10 +176,6 @@ class Footer extends Component {
                             <div className="col-lg-6 col-md-6">
                                 <p> 
                                     &copy; {currentYear} Raxr. All Rights Reserved by
-
-                                    <a href="https://envytheme.com/" target="_blank">
-                                        EnvyTheme
-                                    </a>
                                 </p>
                             </div>
 

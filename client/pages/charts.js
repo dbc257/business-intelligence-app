@@ -2,6 +2,7 @@ import React, { Component, useEffect, useState } from "react"
 import { Bar, Line, Pie } from "react-chartjs-2"
 import Navbar from "../components/Layouts/Navbar";
 import Footer from "../components/Layouts/Footer";
+import { useRouter } from "next/router"
 
 
 export default function Charts({ dataset }) {
@@ -19,7 +20,10 @@ export default function Charts({ dataset }) {
     //         },
     //     ],
     // };
-    console.log(dataset)
+
+    const router = useRouter()
+    const { pid } = router
+
     const lineData = {
         labels: ["January", "February", "March", "April", "May", "June", "July"],
         datasets: [

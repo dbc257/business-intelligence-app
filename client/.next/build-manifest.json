@@ -9,7 +9,7 @@
     "static/development/_ssgManifest.js"
   ],
   "pages": {
-    "/404": [
+    "/": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
@@ -24,7 +24,19 @@
     "/_polyfills": [
       "static/runtime/polyfills.js"
     ],
-    "/charts": [
+    "/charts/[company]": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/explore": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/index": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/next/dist/pages/_error": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ]
