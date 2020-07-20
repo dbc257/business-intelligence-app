@@ -25,7 +25,7 @@ class Index4 extends Component {
         {/* <SolutionsTab /> */}
         {/* <FeaturedService /> */}
         {/* <Testimonial /> */}
-        <GetStartedProject />
+        {/* <GetStartedProject /> */}
         {/* <BlogPost /> */}
         {/* <ContactForm /> */}
         <CustomerStyleTwo />

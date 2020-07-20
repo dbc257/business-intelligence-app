@@ -1,4 +1,5 @@
-import React from "react";
+// import React from "react";
+import React, { Component } from "react";
 // import loginImg from "../../public/images/login.svg";
 import axios from "axios";
 // import { connect } from "react-redux";
@@ -75,12 +76,90 @@ class LoginContent extends React.Component {
 
   render() {
     return (
-      <div className="base-container" ref={this.props.containerRef}>
+      // <h4>Login</h4>
+      <div className="contact-section ptb-100">
+        <div className="container">
+          <div className="row align-items-center">
+            <div className="col-lg-6">
+              <div className="contact-image">
+                <img src="/images/contact.png" alt="image" />
+              </div>
+            </div>
+
+            <div className="col-lg-6">
+              <div className="contact-form">
+                <form id="contactForm">
+                  <div className="row">
+                    <div className="col-lg-6 col-md-6">
+                      <div className="form-group">
+                        <input
+                          onChange={this.handleLogin}
+                          type="text"
+                          name="username"
+                          placeholder="Username"
+                          required
+                        />
+                      </div>
+                    </div>
+
+                    <div className="col-lg-6 col-md-6">
+                      <div className="form-group">
+                        <input
+                          onChange={this.handleLogin}
+                          type="password"
+                          name="password"
+                          placeholder="Password"
+                          required
+                        />
+                      </div>
+                    </div>
+
+                    <div className="col-lg-12 col-md-12">
+                      <button
+                        onClick={this.handleLoginPost}
+                        type="button"
+                        type="submit"
+                        className="submit-btn mt-2"
+                      >
+                        Login
+                      </button>
+                      <hr />
+                      <button
+                        onClick={this.handleGuestPost}
+                        type="button"
+                        type="submit"
+                        className="submit-btn mt-2"
+                      >
+                        Guest Login
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+}
+
+// const mapDispatchToProps = (dispatch) => {
+//   return {
+//     onAuthenticated: () => dispatch(actionCreators.authenticated(true)),
+//   };
+// };
+
+// export default connect(null, mapDispatchToProps)(LoginJSX);
+
+export default LoginContent;
+
+/* <div className="base-container" ref={this.props.containerRef}>
         <div className="header">Login</div>
         <div className="content">
           {/* <div className="image">
             <img alt="login" src={loginImg} />
-          </div> */}
+          </div>
           <div className="form">
             <div className="form-group">
               <label htmlFor="username">Username</label>
@@ -117,17 +196,4 @@ class LoginContent extends React.Component {
         >
           Guest Login
         </button>
-      </div>
-    );
-  }
-}
-
-// const mapDispatchToProps = (dispatch) => {
-//   return {
-//     onAuthenticated: () => dispatch(actionCreators.authenticated(true)),
-//   };
-// };
-
-// export default connect(null, mapDispatchToProps)(LoginJSX);
-
-export default LoginContent;
+      </div> */

@@ -18,7 +18,7 @@ class AboutUsContent extends Component {
                 <span>About Us</span>
                 <h2>Focused On Actionable Insights</h2>
                 <p>
-                  Users are able to display their data through intuitive and
+                  Users are able to display data through intuitive and
                   insightful charts at the click of a button.
                 </p>
 
