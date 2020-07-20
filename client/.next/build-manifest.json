@@ -31,10 +31,6 @@
     "/login": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
-    ],
-    "/register": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
     ]
   }
 }
