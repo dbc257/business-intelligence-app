@@ -1,5 +1,8 @@
 import React, { Component } from "react";
 import Link from "../../utils/ActiveLink";
+// import { connect } from "react-redux";
+import { setAuthenticationHeader } from "../../utils/Auth";
+// import * as actionCreators from "../../store/creators/actionCreators";
 
 class Navbar extends Component {
   // Navbar
@@ -8,6 +11,12 @@ class Navbar extends Component {
     display: false,
     collapsed: true,
   };
+  // handleSignOut = () => {
+  //   props.onAuthenticated(false);
+  //   localStorage.removeItem("jsonwebtoken");
+  //   localStorage.removeItem("jwt_access_token");
+  //   setAuthenticationHeader(null);
+  // };
   toggleNavbar = () => {
     this.setState({
       collapsed: !this.state.collapsed,
@@ -108,11 +117,16 @@ class Navbar extends Component {
                       </Link>
                     </li>
 
-                    <li className="nav-item">
-                      <Link href="/signout" activeClassName="active">
+                    {/* <li className="nav-item">
+                      <Link
+                        href="/signout"
+                        activeClassName="active"
+                        type="button"
+                        onClick={handleSignOut}
+                      >
                         <a className="nav-link">Signout</a>
                       </Link>
-                    </li>
+                    </li> */}
                   </ul>
                 </div>
               </nav>
@@ -123,5 +137,19 @@ class Navbar extends Component {
     );
   }
 }
+
+// const mapStateToProps = (state) => {
+//   return {
+//     isLoggedIn: state.loginRed.isLoggedIn,
+//   };
+// };
+
+// const mapDispatchToProps = (dispatch) => {
+//   return {
+//     onAuthenticated: (isLoggedIn) =>
+//       dispatch(actionCreators.authenticated(isLoggedIn)),
+//   };
+// };
+// export default connect(mapStateToProps, mapDispatchToProps)(Navbar);
 
 export default Navbar;

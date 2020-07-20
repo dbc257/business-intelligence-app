@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Navbar from "../components/Layouts/Navbar";
 import PageBanner from "../components/Common/PageBanner";
 import Footer from "../components/Layouts/Footer";
-import RegisterPage from "../components/Login/RegisterPage";
+import RegisterContent from "../components/Register/RegisterContent";
 
 class Register extends Component {
   render() {
@@ -15,7 +15,7 @@ class Register extends Component {
           breadcrumbTextTwo="About Us"
           breadcrumbUrl="/"
         />
-        <RegisterPage />
+        <RegisterContent />
         <Footer />
       </React.Fragment>
     );

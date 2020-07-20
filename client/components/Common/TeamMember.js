@@ -8,11 +8,11 @@ class TeamMember extends Component {
         <div className="container">
           <div className="section-title">
             <span>Our Experts</span>
-            <h2>Meet Our Leadership Preparing For Your Success</h2>
+            <h2>Meet The Developers</h2>
           </div>
 
           <div className="row">
-            <div className="col-lg-4 col-sm-6">
+            <div className="col-lg-6 col-sm-6">
               <div className="single-team-item">
                 <div className="team-image">
                   <img src="/images/team/team1.jpg" alt="team" />
@@ -45,7 +45,7 @@ class TeamMember extends Component {
               </div>
             </div>
 
-            <div className="col-lg-4 col-sm-6">
+            <div className="col-lg-6 col-sm-6">
               <div className="single-team-item">
                 <div className="team-image">
                   <img src="/images/team/team2.jpg" alt="team" />
@@ -78,7 +78,7 @@ class TeamMember extends Component {
               </div>
             </div>
 
-            <div className="col-lg-4 col-sm-6 offset-lg-0 offset-sm-3">
+            {/* <div className="col-lg-4 col-sm-6 offset-lg-0 offset-sm-3">
               <div className="single-team-item">
                 <div className="team-image">
                   <img src="/images/team/team3.jpg" alt="team" />
@@ -109,7 +109,7 @@ class TeamMember extends Component {
                   <span>Software Developer</span>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>

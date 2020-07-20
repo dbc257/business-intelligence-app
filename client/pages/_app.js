@@ -6,6 +6,7 @@ import "../public/css/fontawesome.min.css";
 import "react-accessible-accordion/dist/fancy-example.css";
 import "../public/css/style.css";
 import "../public/css/responsive.css";
+// import "../scss/LoginPage.scss";
 
 import App from "next/app";
 import Head from "next/head";

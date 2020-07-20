@@ -20,12 +20,12 @@ class AboutUs extends Component {
           breadcrumbTextTwo="About Us"
           breadcrumbUrl="/"
         />
-        <AboutUsContent />
-        <FunFacts />
+        {/* <AboutUsContent /> */}
+        {/* <FunFacts />
 
         <div className="pb-100">
           <GetStartedProject />
-        </div>
+        </div> */}
 
         {/* <Testimonial /> */}
         <TeamMember />
