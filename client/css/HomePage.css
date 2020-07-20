@@ -1,0 +1,8 @@
+.homepage-wrapper {
+  /* background: linear-gradient(60deg, #420285, #08bdbd); */
+  height: 90vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  color: seashell;
+}

@@ -1,0 +1,33 @@
+.chart-info {
+  /* z-index: 99; */
+  /* width: 500px; */
+  /* height: 500px; */
+  background-color: white;
+}
+
+h3 {
+  color: seashell;
+  margin-top: 15px;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+}
+
+.charts-wrapper {
+  /* background: linear-gradient(60deg, #420285, #08bdbd); */
+  /* height: 10vh; */
+  height: 10%;
+  width: 100%;
+  display: flexbox;
+  justify-content: center;
+  color: seashell;
+}
+.charts-container {
+  /* background: linear-gradient(60deg, #420285, #08bdbd); */
+  /* height: 10vh; */
+  height: 10%;
+  width: 100%;
+  display: flexbox;
+  justify-content: center;
+  color: seashell;
+}

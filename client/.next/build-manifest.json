@@ -13,6 +13,10 @@
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
+    "/404": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
     "/_app": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
@@ -24,19 +28,7 @@
     "/_polyfills": [
       "static/runtime/polyfills.js"
     ],
-    "/about-us": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
-    ],
-    "/contact": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
-    ],
     "/index": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
-    ],
-    "/projects": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ]
