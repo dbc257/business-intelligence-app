@@ -1,23 +1,25 @@
-import React, { Component } from "react"
+import React, { Component, useEffect, useState } from "react"
 import { Bar, Line, Pie } from "react-chartjs-2"
+import Navbar from "../components/Layouts/Navbar";
+import Footer from "../components/Layouts/Footer";
 
 
-export default function Charts(props) {
-    const barData = {
-        labels: ["January", "February", "March", "April", "May", "June", "July"],
-        datasets: [
-            {
-                label: "My First dataset",
-                backgroundColor: "rgba(255,99,132,0.2)",
-                borderColor: "rgba(255,99,132,1)",
-                borderWidth: 1,
-                hoverBackgroundColor: "rgba(255,99,132,0.4)",
-                hoverBorderColor: "rgba(255,99,132,1)",
-                data: [65, 59, 80, 81, 56, 55, 40],
-            },
-        ],
-    };
-
+export default function Charts({ dataset }) {
+    // const barData = {
+    //     labels: ["January", "February", "March", "April", "May", "June", "July"],
+    //     datasets: [
+    //         {
+    //             label: "My First dataset",
+    //             backgroundColor: "rgba(255,99,132,0.2)",
+    //             borderColor: "rgba(255,99,132,1)",
+    //             borderWidth: 1,
+    //             hoverBackgroundColor: "rgba(255,99,132,0.4)",
+    //             hoverBorderColor: "rgba(255,99,132,1)",
+    //             data: [65, 59, 80, 81, 56, 55, 40],
+    //         },
+    //     ],
+    // };
+    console.log(dataset)
     const lineData = {
         labels: ["January", "February", "March", "April", "May", "June", "July"],
         datasets: [
@@ -98,21 +100,64 @@ export default function Charts(props) {
         },
     };
 
+
+    // useEffect(() => {
+    //     barData = fetch(`http://localhost:3001/api/bar`)
+    //         .then((response) => response.json())
+    //         .then((result) => {
+    //             console.log(result)
+    //             barData = result
+    //         })
+    // }, [])
+
+
+
     return (
-        <>
-            <Bar
-                data={barData}
-                options={barOptions}
-            />
-            <Line
-                data={lineData}
-                options={lineOptions}    
-            />
-            <Pie data={pieData} />
-        </>
+        <React.Fragment>
+            <Navbar />
+            {/* <PageBanner
+                pageTitle="Charts"
+                breadcrumbTextOne="Home"
+                breadcrumbTextTwo="About Us"
+                breadcrumbUrl="/"
+            /> */}
+            <div className="charts-div">
+                <Bar
+                    data={dataset}
+                    options={barOptions}
+                />
+                <Line
+                    data={lineData}
+                    options={lineOptions}    
+                />
+                <Pie data={pieData} />
+            </div>
+            <style jsx>
+                {`
+                 .charts-div {
+                    padding-top: 100px;
+                 }   
+
+                 .main-nav {
+
+                 }
+                `}
+            </style>
+            <Footer />
+        </React.Fragment>
     )
 }
 
+export async function getStaticProps() {
+    const res = await fetch(`http://localhost:3001/api/bar`)
+    const json = await res.json()
+    console.log(json)
+    return {
+        props: {
+            dataset: json
+        }
+    }
+}
 
 // class Charts extends React.Component {
 //     render() {
