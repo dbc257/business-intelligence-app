@@ -5,7 +5,7 @@ import Navbar from "../../../components/Layouts/Navbar"
 import Footer from "../../../components/Layouts/Footer";
 import { Line, Bar, Pie } from "react-chartjs-2"
 
-const Charts = () => {
+const Charts = ({ companies }) => {
     const router = useRouter()
     const { company } = router.query
 
@@ -14,29 +14,6 @@ const Charts = () => {
         allQuarters,
         allRevenue,
         allExpenses
-
-    useEffect(() => {
-        fetch(`http://localhost:3001/${company}`)
-            .then(response => response.json())
-            .then((result) => {
-                console.log(result)
-                data = result
-                allQuarters = data.map(ele => {
-                    return ele.date
-                })
-
-                allRevenue = data.map(ele => {
-                    return ele.revenue
-                })
-
-                allExpenses = data.map(ele => {
-                    return ele.costAndExpenses
-                })
-
-                console.log(allExpenses)
-            })
-    })
-
 
         return (
             <React.Fragment>
@@ -48,6 +25,7 @@ const Charts = () => {
                 breadcrumbUrl="/"
             /> */}
                 <div className="charts-div">
+
                     <h2>{company}</h2>
                     {/* <Bar
                         data={barData}
@@ -83,7 +61,7 @@ const Charts = () => {
 //     console.log(companies)
 
 
-//     const paths = companies.map(ele => `/charts/${ele.name}`)
+//     const paths = await companies.map(ele => `/charts/${ele.name}`)
 
 //     return {
 //         paths,
@@ -92,16 +70,16 @@ const Charts = () => {
 // }
 
 
-// export async function getStaticProps() {
-//     const res = await fetch(`http://localhost:3001/companies`)
-//     const json = await res.json()
-//     console.log(json)
-//     return {
-//         props: {
-//             json
-//         }
-//     }
-//   }
+export async function getStaticProps() {
+    const res = await fetch(`http://localhost:3001/companies`)
+    const json = await res.json()
+    console.log(json)
+    return {
+        props: {
+            companies
+        }
+    }
+}
 
 
     // useEffect(() => {

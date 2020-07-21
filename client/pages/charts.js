@@ -1,4 +1,4 @@
-import React, { Component, useEffect, useState } from "react"
+import react from "react"
 import { Bar, Line, Pie } from "react-chartjs-2"
 import Navbar from "../components/Layouts/Navbar";
 import Footer from "../components/Layouts/Footer";
@@ -6,20 +6,20 @@ import { useRouter } from "next/router"
 
 
 export default function Charts({ dataset }) {
-    // const barData = {
-    //     labels: ["January", "February", "March", "April", "May", "June", "July"],
-    //     datasets: [
-    //         {
-    //             label: "My First dataset",
-    //             backgroundColor: "rgba(255,99,132,0.2)",
-    //             borderColor: "rgba(255,99,132,1)",
-    //             borderWidth: 1,
-    //             hoverBackgroundColor: "rgba(255,99,132,0.4)",
-    //             hoverBorderColor: "rgba(255,99,132,1)",
-    //             data: [65, 59, 80, 81, 56, 55, 40],
-    //         },
-    //     ],
-    // };
+    const barData = {
+        labels: ["January", "February", "March", "April", "May", "June", "July"],
+        datasets: [
+            {
+                label: "Example dataset",
+                backgroundColor: "rgba(255,99,132,0.2)",
+                borderColor: "rgba(255,99,132,1)",
+                borderWidth: 1,
+                hoverBackgroundColor: "rgba(255,99,132,0.4)",
+                hoverBorderColor: "rgba(255,99,132,1)",
+                data: [65, 59, 80, 81, 56, 55, 40],
+            },
+        ],
+    };
 
     const router = useRouter()
     const { pid } = router
@@ -28,7 +28,7 @@ export default function Charts({ dataset }) {
         labels: ["January", "February", "March", "April", "May", "June", "July"],
         datasets: [
             {
-                label: "My First dataset",
+                label: "Example dataset",
                 fill: false,
                 lineTension: 0.1,
                 backgroundColor: "rgba(75,192,192,0.4)",
@@ -140,6 +140,7 @@ export default function Charts({ dataset }) {
                 {`
                  .charts-div {
                     padding-top: 100px;
+                    background-color: #A8A7D4;
                  }   
 
                  .main-nav {
