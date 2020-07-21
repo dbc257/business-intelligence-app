@@ -77,77 +77,92 @@ class LoginContent extends React.Component {
   render() {
     return (
       // <h4>Login</h4>
-      <div className="contact-section ptb-100">
-        <div className="container">
-          <div className="row align-items-center">
-            <div className="col-lg-6">
-              <div className="contact-image">
-                <img src="/images/contact.png" alt="image" />
-              </div>
-            </div>
+      // <div className="contact-section ptb-100">
+      //   <div className="container">
+      <div className="row align-items-center">
+        <div className="col-lg-6">
+          <div className="contact-image">
+            <img src="/images/contact.png" alt="image" />
+          </div>
+        </div>
+        <div className="col-lg-6 col-md-6">
+          <h2>Login</h2>
+          <br></br>
 
-            <div className="col-lg-6">
-              <div className="contact-form">
-                {/* <form> */}
-                <div className="row">
-                  <div className="col-lg-10 col-md-10">
-                    <div className="form-group">
-                      <input
-                        onChange={this.handleLogin}
-                        type="text"
-                        name="username"
-                        placeholder="Username"
-                        className="form-control"
-                        required
-                      />
-                    </div>
-                  </div>
-
-                  <div className="col-lg-10 col-md-10">
-                    <div className="form-group">
-                      <input
-                        onChange={this.handleLogin}
-                        type="password"
-                        name="password"
-                        placeholder="Password"
-                        className="form-control"
-                        required
-                      />
-                    </div>
-                  </div>
-
-                  <div className="col-lg-10 col-md-10">
-                    <button
-                      onClick={this.handleLoginPost}
-                      type="button"
-                      type="submit"
-                      className="submit-btn mt-2"
-                    >
-                      Login
-                    </button>
-                  </div>
+          {/* <div className="col-lg-6"> */}
+          <div className="contact-form">
+            {/* <form> */}
+            <div className="row">
+              <div className="col-lg-10 col-md-10">
+                {/* <div className="form-group"> */}
+                <div className="newsletter-form">
+                  <input
+                    onChange={this.handleLogin}
+                    type="text"
+                    name="username"
+                    placeholder="Username"
+                    className="form-control"
+                    required
+                  />
                 </div>
-                {/* </form> */}
+                {/* </div> */}
                 <br></br>
-                {/* <form> */}
+
+                {/* <div className="col-lg-10 col-md-10"> */}
+                {/* <div className="form-group"> */}
+                <div className="newsletter-form">
+                  <input
+                    onChange={this.handleLogin}
+                    type="password"
+                    name="password"
+                    placeholder="Password"
+                    className="form-control"
+                    required
+                  />
+                </div>
+                {/* </div> */}
+                <br></br>
                 <div className="row">
-                  <div className="col-lg-10 col-md-10">
-                    <button
-                      onClick={this.handleGuestPost}
-                      type="button"
-                      type="submit"
-                      className="submit-btn mt-2"
-                    >
-                      Guest Login
-                    </button>
+                  <div className="col-lg-12 col-md-12">
+                    <div className="contact-form">
+                      <button
+                        onClick={this.handleLoginPost}
+                        type="button"
+                        type="submit"
+                        className="submit-btn mt-2"
+                      >
+                        Login
+                      </button>
+                    </div>
                   </div>
                 </div>
-                {/* </form> */}
               </div>
             </div>
           </div>
+          {/* </form> */}
+          <br></br>
+          {/* <form> */}
+          <div className="row">
+            <div className="col-lg-10 col-md-10">
+              <div className="contact-form">
+                {/* <div className="newsletter-form"> */}
+                <button
+                  onClick={this.handleGuestPost}
+                  type="button"
+                  type="submit"
+                  className="submit-btn mt-2"
+                >
+                  Guest Login
+                </button>
+              </div>
+            </div>
+
+            {/* </form> */}
+          </div>
         </div>
       </div>
+      // </div>
+      // </div>
     );
   }
 }
