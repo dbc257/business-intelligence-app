@@ -1,0 +1,32 @@
+{
+  "name": "cpm-cube",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dbc257/CPM-Cube.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dbc257/CPM-Cube/issues"
+  },
+  "homepage": "https://github.com/dbc257/CPM-Cube#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "papaparse": "^5.2.0",
+    "pg": "^8.2.1",
+    "react-papaparse": "^3.4.0",
+    "sequelize": "^5.22.3"
+  },
+  "devDependencies": {}
+}

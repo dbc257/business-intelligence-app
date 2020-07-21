@@ -29,7 +29,7 @@ export default class MyApp extends App {
   componentDidMount() {
     this.timerHandle = setTimeout(
       () => this.setState({ loading: false }),
-      2000
+      700
     );
   }
   componentWillUnmount() {
@@ -58,7 +58,6 @@ export default class MyApp extends App {
             name="twitter:card"
             content="BI Cube - Business Intelligence Cube"
           ></meta>
-          <link rel="canonical" href="https://raxr-react.envytheme.com/"></link>
         </Head>
 
         <Component {...pageProps} />
