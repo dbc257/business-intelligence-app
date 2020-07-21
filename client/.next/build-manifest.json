@@ -24,27 +24,11 @@
     "/_polyfills": [
       "static/runtime/polyfills.js"
     ],
-    "/about-us": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
-    ],
     "/charts": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
-    "/explore": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
-    ],
     "/index": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
-    ],
-    "/login": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
-    ],
-    "/register": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ]
