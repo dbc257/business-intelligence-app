@@ -49,8 +49,6 @@ class RegisterContent extends React.Component {
             <div className="subscribe-content">
               <h2>Register</h2>
             </div>
-
-            {/* <form className="newsletter-form"> */}
             <div className="newsletter-form">
               <div>
                 <input
