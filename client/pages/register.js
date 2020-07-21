@@ -10,9 +10,9 @@ class Register extends Component {
       <React.Fragment>
         <Navbar />
         <PageBanner
-          pageTitle="About Us"
+          pageTitle="Register"
           breadcrumbTextOne="Home"
-          breadcrumbTextTwo="About Us"
+          breadcrumbTextTwo="Register"
           breadcrumbUrl="/"
         />
         <RegisterContent />
