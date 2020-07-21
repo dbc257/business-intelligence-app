@@ -12,9 +12,9 @@ class Navbar extends Component {
     collapsed: true,
   };
   // handleSignOut = () => {
-  //   props.onAuthenticated(false);
-  //   localStorage.removeItem("jsonwebtoken");
-  //   localStorage.removeItem("jwt_access_token");
+  //   // props.onAuthenticated(false);
+  //   this.localStorage.removeItem("jsonwebtoken");
+  //   this.localStorage.removeItem("jwt_access_token");
   //   setAuthenticationHeader(null);
   // };
   toggleNavbar = () => {
@@ -95,11 +95,11 @@ class Navbar extends Component {
                         <a className="nav-link">Explore</a>
                       </Link>
                     </li>
-                    <li className="nav-item">
+                    {/* <li className="nav-item">
                       <Link href="/charts" activeClassName="active">
                         <a className="nav-link">Charts</a>
                       </Link>
-                    </li>
+                    </li> */}
                     <li className="nav-item">
                       <Link href="/about-us" activeClassName="active">
                         <a className="nav-link">About Us</a>
@@ -122,7 +122,7 @@ class Navbar extends Component {
                         href="/signout"
                         activeClassName="active"
                         type="button"
-                        onClick={handleSignOut}
+                        onClick={this.handleSignOut()}
                       >
                         <a className="nav-link">Signout</a>
                       </Link>

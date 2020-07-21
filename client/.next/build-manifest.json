@@ -20,11 +20,11 @@
     "/_polyfills": [
       "static/runtime/polyfills.js"
     ],
-    "/charts": [
+    "/charts/facebook": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
-    "/login": [
+    "/charts/tesla": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ]

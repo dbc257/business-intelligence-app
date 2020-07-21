@@ -1,12 +1,23 @@
-import react, { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 // import { Bar, Line, Pie } from "react-chartjs-2";
 import { Line } from "react-chartjs-2";
 // import Navbar from "../components/Layouts/Navbar";
 // import Footer from "../components/Layouts/Footer";
 // import { useRouter } from "next/router";
+// import Company from "../../pages/charts/[company]";
 
 function ChartsContent() {
   const [financials, setFinancials] = useState([]);
+
+  // async getServerSideProps = () => {
+  //   const res = await fetch(`http://localhost:3001/charts`);
+  //   const json = await res.json();
+  //   console.log(json);
+  //   return {
+  //     props: {
+  //       companies,
+  //     },
+  //   };
 
   useEffect(() => {
     fetch("http://localhost:3001/facebook")
@@ -15,6 +26,14 @@ function ChartsContent() {
         setFinancials(result);
       });
   }, []);
+
+  // useEffect(() => {
+  //   fetch("http://localhost:3001/facebook")
+  //     .then((response) => response.json())
+  //     .then((result) => {
+  //       setFinancials(result);
+  //     });
+  // }, []);
 
   const labelsDate = financials.map((financeDate) => {
     return financeDate.date;

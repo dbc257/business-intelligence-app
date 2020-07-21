@@ -1,9 +1,8 @@
 import React, { Component } from "react";
-// import Link from "next/link";
-import Navbar from "../components/Layouts/Navbar";
-import PageBanner from "../components/Common/PageBanner";
-import ChartsContent from "../components/Charts/ChartsContent";
-import Footer from "../components/Layouts/Footer";
+import Navbar from "../../components/Layouts/Navbar";
+import PageBanner from "../../components/Common/PageBanner";
+import ChartsFacebookContent from "../../components/Charts/ChartsFacebookContent";
+import Footer from "../../components/Layouts/Footer";
 
 class Charts extends Component {
   render() {
@@ -16,7 +15,7 @@ class Charts extends Component {
           breadcrumbTextTwo="Charts"
           breadcrumbUrl="/"
         />
-        <ChartsContent />
+        <ChartsFacebookContent />
 
         <Footer />
       </React.Fragment>
