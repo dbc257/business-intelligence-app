@@ -8,7 +8,7 @@ class Explore extends Component {
         return (
             <React.Fragment >
                 <Navbar />
-                <section className="services-section pt-100 pb-70">
+                <section className="services-section pt-100 pb-70 chart-options">
                 <div className="container">
                     <div className="section-title">
                         <h2>Explore Our Charts</h2>
@@ -24,7 +24,8 @@ class Explore extends Component {
                                 <h3>Tesla</h3>
                                     <p>Tesla, Inc. designs, develops, manufactures, leases, and sells electric vehicles, and energy generation and storage systems in the United States and internationally.</p>
 
-                                <Link href="/charts/[pid]" as="/charts/tesla">
+                                {/* <Link href="/charts/[company]" as="/charts/tesla"> */}
+                                <Link href="/charts" as="/charts">
                                     <a className="service-btn">
                                         See Charts
                                         <i className="flaticon-right"></i>
@@ -42,7 +43,8 @@ class Explore extends Component {
                                 <h3>Facebook</h3>
                                     <p>Facebook, Inc. develops products that enable people to connect and share with friends and family through mobile devices, personal computers, and in-home devices worldwide.</p>
 
-                                <Link href="/charts/[pid]" as="/charts/facebook">
+                                {/* <Link href="/charts/[company]" as="/charts/facebook"> */}
+                                <Link href="/charts" as="/charts">
                                     <a className="service-btn">
                                         Read More
                                         <i className="flaticon-right"></i>
@@ -59,7 +61,7 @@ class Explore extends Component {
                                 <h3>Apple</h3>
                                     <p>Apple Inc. designs, manufactures, and markets smartphones, personal computers, tablets, wearables, and accessories worldwide. It also sells various related services.</p>
 
-                                    <Link href="/charts/[pid]" as="/charts/apple">
+                                    <Link href="/charts" as="/charts">
                                     <a className="service-btn">
                                         Read More
                                         <i className="flaticon-right"></i>
@@ -75,7 +77,23 @@ class Explore extends Component {
                         <span>Upload your own data</span>
                     </div>
                 </div>
-            </section>
+                </section>
+                <style jsx>
+                    {`
+                 .container {
+                    padding-top: 150px !important;
+
+                 }   
+
+                 .services-section {
+                     background-color: #A8A7D4;
+                 }
+
+                 .main-nav {
+
+                 }
+                `}
+                </style>
                 <Footer />
             </React.Fragment >
         )
