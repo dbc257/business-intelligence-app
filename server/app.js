@@ -31,10 +31,10 @@ const AppleDataRouter = require("./routes/apple");
 app.use("/apple", AppleDataRouter);
 const TeslaDataRouter = require("./routes/tesla");
 app.use("/tesla", TeslaDataRouter);
-const userDataRouter = require("./routes/userData")
-app.use("/userData", userDataRouter)
-const companiesRouter = require("./routes/companies")
-app.use("/companies", companiesRouter)
+const userDataRouter = require("./routes/userData");
+app.use("/userData", userDataRouter);
+const companiesRouter = require("./routes/companies");
+app.use("/companies", companiesRouter);
 
 // POST route to register a new user account
 app.post("/register", (req, res) => {
@@ -85,14 +85,17 @@ app.post("/api/login", (req, res) => {
       } else {
         if (persistedUser) {
           if (bcrypt.compareSync(password, persistedUser.password)) {
-            console.log(persistedUser)
-            const token = jwt.sign({ username: username, id: persistedUser.id }, "keyboard cat");
+            // console.log(persistedUser)
+            const token = jwt.sign(
+              { username: username, id: persistedUser.id },
+              "keyboard cat"
+            );
             // console.log(token);
             res.json({
               message: "You are now logged in! ",
               success: true,
               token: token,
-              userId: persistedUser.id
+              userId: persistedUser.id,
             });
           }
         } else {
@@ -125,12 +128,15 @@ app.post("/api/guest-login", (req, res) => {
       } else {
         if (persistedUser) {
           if (bcrypt.compareSync(password, persistedUser.password)) {
-            const token = jwt.sign({ username: username }, "keyboard cat");
+            const token = jwt.sign(
+              { username: username },
+              process.env.JWT_PASSWORD
+            );
             // console.log(token);
             res.json({
               message: "You are now logged in! ",
               success: true,
-              token: token
+              token: token,
             });
           }
         } else {
@@ -143,7 +149,7 @@ app.post("/api/guest-login", (req, res) => {
 
 app.post("/chart-data", (req, res) => {
   req.body.map(async (dummy) => {
-    const currentSessionId = req.session.user
+    const currentSessionId = req.session.user;
 
     await models.Company.create({
       symbol: dummy.symbol,
@@ -158,11 +164,11 @@ app.post("/chart-data", (req, res) => {
 
 app.post("/api/data", (req, res) => {
   let csvData = req.body;
-  let token = req.headers["authorization"].split(" ")[1]
+  let token = req.headers["authorization"].split(" ")[1];
 
-  const decoded = jwt.verify(token, "keyboard cat")
+  const decoded = jwt.verify(token, process.env.JWT_PASSWORD);
 
-  let userId = decoded.id
+  let user_id = decoded.id;
 
   // console.log(csvData)
 
@@ -177,33 +183,30 @@ app.post("/api/data", (req, res) => {
 
   console.log(typeof csvData);
 
-  let formattedCsvData = csvData.map(element => {
+  let formattedCsvData = csvData.map((element) => {
     return {
-      revenue: element["Revenue"], 
+      revenue: element["Revenue"],
       expenses: element["Expenses"],
       cost_expenses: element["costAndExpenses"],
       gross_profit: element["grossProfit"],
       company: element["company"],
-      userId: userId
-    }
-  })
+      user_id: user_id,
+    };
+  });
 
   // csvData = csvData.map((ele) => {
   //     console.log(ele)
-  //     revenue: element["Revenue"], 
+  //     revenue: element["Revenue"],
   // })
 
-  console.log(formattedCsvData)
+  console.log(formattedCsvData);
 
-  
-  models.SavedData.bulkCreate(formattedCsvData)
+  models.SavedData.bulkCreate(formattedCsvData);
 });
 
 app.post("/api/test", (req, res) => {
-  
-  
-  res.json()
-})
+  res.json();
+});
 
 const port = process.env.PORT || 3001;
 

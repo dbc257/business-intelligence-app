@@ -29,49 +29,65 @@ class RegisterContent extends React.Component {
       .then((res) => res.json())
       .then((response) => {
         alert(response.message);
-        this.props.history.push("/login");
+        // this.props.history.push("/login");
       });
   };
 
   render() {
     return (
-      <div className="base-container" ref={this.props.containerRef}>
-        <div className="header">Register</div>
-        <div className="content">
-          {/* <div className="image">
-            <img alt="register" src={loginImg} />
-          </div> */}
-          <div className="form">
-            <div className="form-group">
-              <label htmlFor="username">Username</label>
-              <input
-                onChange={this.handleRegister}
-                type="text"
-                name="username"
-                placeholder="username"
-                required
-              />
-              <label htmlFor="password">Password</label>
-              <input
-                onChange={this.handleRegister}
-                type="password"
-                name="password"
-                placeholder="password"
-                required
-              />
+      // <section className="subscribe-section p-0">
+      // <div className="container">
+      <div className="subscribe-content-area mb-0">
+        <div className="row align-items-center">
+          <div className="col-lg-6 col-md-6">
+            <div className="subscribe-image">
+              <img src="/images/subscribe.png" alt="image" />
             </div>
           </div>
-          <div>
-            <button
-              onClick={this.handleRegisterPost}
-              type="button"
-              className="login-btn"
-            >
-              Register
-            </button>
+
+          <div className="col-lg-6 col-md-6">
+            <div className="subscribe-content">
+              <h2>Register</h2>
+            </div>
+            <div className="newsletter-form">
+              <div>
+                <input
+                  onChange={this.handleRegister}
+                  type="text"
+                  name="username"
+                  placeholder="Username"
+                  className="input-newsletter"
+                  required
+                />
+              </div>
+              <br></br>
+              <div className="newsletter-form">
+                <input
+                  onChange={this.handleRegister}
+                  type="text"
+                  name="password"
+                  placeholder="Password"
+                  className="input-newsletter"
+                  required
+                />
+              </div>
+              <br></br>
+              <div className="newsletter-form">
+                <button
+                  onClick={this.handleRegisterPost}
+                  type="submit"
+                  className="submit-btn mt-2"
+                >
+                  Submit
+                </button>
+              </div>
+            </div>
+            {/* </form> */}
           </div>
         </div>
       </div>
+      // </div>
+      // </section>
     );
   }
 }

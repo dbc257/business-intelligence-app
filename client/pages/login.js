@@ -17,9 +17,9 @@ class Login extends Component {
       <React.Fragment>
         <Navbar />
         <PageBanner
-          pageTitle="About Us"
+          pageTitle="Login"
           breadcrumbTextOne="Home"
-          breadcrumbTextTwo="About Us"
+          breadcrumbTextTwo="Login"
           breadcrumbUrl="/"
         />
 
