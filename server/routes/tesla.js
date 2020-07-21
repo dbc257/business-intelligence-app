@@ -120,7 +120,7 @@ router.get("/charts-revenue-tsla2017", (req, res) => {
   }).then((result) => res.json(result));
 });
 
-router.get("/tesla", (req, res) => {
+router.get("/", (req, res) => {
   models.Company.findAll({
     where: {
       [Op.or]: [

@@ -9,15 +9,28 @@
     "static/development/_ssgManifest.js"
   ],
   "pages": {
-    "/": ["static/runtime/webpack.js", "static/runtime/main.js"],
-    "/_app": ["static/runtime/webpack.js", "static/runtime/main.js"],
-    "/_error": ["static/runtime/webpack.js", "static/runtime/main.js"],
-    "/_polyfills": ["static/runtime/polyfills.js"],
-    "/about-us": ["static/runtime/webpack.js", "static/runtime/main.js"],
-    "/charts": ["static/runtime/webpack.js", "static/runtime/main.js"],
-    "/explore": ["static/runtime/webpack.js", "static/runtime/main.js"],
-    "/index": ["static/runtime/webpack.js", "static/runtime/main.js"],
-    "/login": ["static/runtime/webpack.js", "static/runtime/main.js"],
-    "/register": ["static/runtime/webpack.js", "static/runtime/main.js"]
+    "/": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/_app": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/_error": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/_polyfills": [
+      "static/runtime/polyfills.js"
+    ],
+    "/charts": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/index": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ]
   }
 }
