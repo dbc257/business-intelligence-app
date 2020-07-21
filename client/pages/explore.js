@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Link from 'next/link';
 import Navbar from "../components/Layouts/Navbar";
 import Footer from "../components/Layouts/Footer";
+import { useRouter } from "next/router"
 
 class Explore extends Component {
     render() {
@@ -24,8 +25,7 @@ class Explore extends Component {
                                 <h3>Tesla</h3>
                                     <p>Tesla, Inc. designs, develops, manufactures, leases, and sells electric vehicles, and energy generation and storage systems in the United States and internationally.</p>
 
-                                {/* <Link href="/charts/[company]" as="/charts/tesla"> */}
-                                <Link href="/charts" as="/charts">
+                                <Link href="/charts/tesla" as="/charts/tesla">
                                     <a className="service-btn">
                                         See Charts
                                         <i className="flaticon-right"></i>
@@ -43,8 +43,7 @@ class Explore extends Component {
                                 <h3>Facebook</h3>
                                     <p>Facebook, Inc. develops products that enable people to connect and share with friends and family through mobile devices, personal computers, and in-home devices worldwide.</p>
 
-                                {/* <Link href="/charts/[company]" as="/charts/facebook"> */}
-                                <Link href="/charts" as="/charts">
+                                <Link href="/charts/facebook" as="/charts/facebook">
                                     <a className="service-btn">
                                         Read More
                                         <i className="flaticon-right"></i>
@@ -61,7 +60,7 @@ class Explore extends Component {
                                 <h3>Apple</h3>
                                     <p>Apple Inc. designs, manufactures, and markets smartphones, personal computers, tablets, wearables, and accessories worldwide. It also sells various related services.</p>
 
-                                    <Link href="/charts" as="/charts">
+                                    <Link href="/charts/apple" as="/charts/apple">
                                     <a className="service-btn">
                                         Read More
                                         <i className="flaticon-right"></i>

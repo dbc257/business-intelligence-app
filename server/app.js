@@ -35,6 +35,8 @@ const userDataRouter = require("./routes/userData")
 app.use("/userData", userDataRouter)
 const companiesRouter = require("./routes/companies")
 app.use("/companies", companiesRouter)
+const chartsRouter = require("./routes/charts")
+app.use("/charts", chartsRouter)
 
 // POST route to register a new user account
 app.post("/register", (req, res) => {

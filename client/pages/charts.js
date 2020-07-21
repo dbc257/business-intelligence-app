@@ -153,17 +153,6 @@ export default function Charts({ dataset }) {
     )
 }
 
-export async function getStaticProps() {
-    const res = await fetch(`http://localhost:3001/api/bar`)
-    const json = await res.json()
-    console.log(json)
-    return {
-        props: {
-            dataset: json
-        }
-    }
-}
-
 // class Charts extends React.Component {
 //     render() {
 //         return (

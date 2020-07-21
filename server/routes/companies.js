@@ -2,12 +2,13 @@ let express = require("express");
 let router = express.Router();
 
 router.get("/", (req, res) => {
-    let companies = [
-        {
-            name: "apple",
-            name: "facebook",
-            name: "tesla"
-        }]
+    let companies = {
+        companies: [
+            "apple",
+            "facebook",
+            "tesla"
+        ]
+    }
     res.json(companies)
 })
 
