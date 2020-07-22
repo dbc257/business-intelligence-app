@@ -120,7 +120,7 @@ router.get("/charts-revenue-aapl2017", (req, res) => {
   }).then((result) => res.json(result));
 });
 
-router.get("/apple", (req, res) => {
+router.get("/", (req, res) => {
   models.Company.findAll({
     where: {
       [Op.or]: [

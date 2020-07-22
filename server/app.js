@@ -33,8 +33,8 @@ const TeslaDataRouter = require("./routes/tesla");
 app.use("/tesla", TeslaDataRouter);
 const userDataRouter = require("./routes/userData");
 app.use("/userData", userDataRouter);
-const companiesRouter = require("./routes/companies");
-app.use("/companies", companiesRouter);
+const companyRouter = require("./routes/charts");
+app.use("/charts", companyRouter);
 
 // POST route to register a new user account
 app.post("/register", (req, res) => {
@@ -137,6 +137,7 @@ app.post("/api/guest-login", (req, res) => {
               message: "You are now logged in! ",
               success: true,
               token: token,
+              userId: persistedUser.id,
             });
           }
         } else {
