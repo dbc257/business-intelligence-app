@@ -2,11 +2,12 @@ import React, { useEffect, useState } from "react";
 import { Line } from "react-chartjs-2";
 import Dropdown from "../../components/Buttons/DropDown";
 
-function ChartsApple2017() {
+
+export default function ChartsApple2019() {
     const [financials, setFinancials] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:3001/apple/2017")
+        fetch("http://localhost:3001/apple/2019")
             .then((response) => response.json())
             .then((result) => {
                 let data = result.sort(function (a, b) {
@@ -139,5 +140,3 @@ function ChartsApple2017() {
             </div>
         );
 }
-
-export default ChartsApple2017;

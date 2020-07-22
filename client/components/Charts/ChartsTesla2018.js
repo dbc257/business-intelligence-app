@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Line } from "react-chartjs-2";
-import Dropdown from "../../components/Buttons/DropDown";
+import DropDown from "../Buttons/DropDown"
 
-export default function ChartsAppleContent() {
+export default function ChartsTelsa2018() {
   const [financials, setFinancials] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3001/apple")
+    fetch("http://localhost:3001/tesla/2018")
       .then((response) => response.json())
       .then((result) => {
         let data = result.sort(function (a, b) {
@@ -19,7 +19,9 @@ export default function ChartsAppleContent() {
       });
   }, []);
 
-  const labelsDate = financials.map((data => data.date))
+  const labelsDate = financials.map((financeDate) => {
+    return financeDate.date;
+  });
 
   const dataRevenue = financials.map((financeRevenue) => {
     return financeRevenue.revenue;
@@ -41,7 +43,7 @@ export default function ChartsAppleContent() {
         fill: false,
         lineTension: 0.1,
         backgroundColor: "rgba(75,192,192,0.4)",
-        borderColor: "red",
+        borderColor: "green",
         borderCapStyle: "butt",
         borderDash: [],
         borderDashOffset: 0.0,
@@ -55,7 +57,7 @@ export default function ChartsAppleContent() {
         pointHoverBorderWidth: 2,
         pointRadius: 1,
         pointHitRadius: 10,
-        data: dataProfit
+        data: dataProfit,
       },
       {
         label: "Expenses",
@@ -83,7 +85,7 @@ export default function ChartsAppleContent() {
         fill: false,
         lineTension: 0.1,
         backgroundColor: "rgba(75,192,192,0.4)",
-        borderColor: "green",
+        borderColor: "red",
         borderCapStyle: "butt",
         borderDash: [],
         borderDashOffset: 0.0,
@@ -101,6 +103,17 @@ export default function ChartsAppleContent() {
       },
     ],
   };
+
+  //   const pieDataProfit = {
+  //     labels: labelsDate,
+  //     datasets: [
+  //       {
+  //         data: dataProfit,
+  //         backgroundColor: ["#FF6384", "#36A2EB", "#FFCE56", "#008000"],
+  //         hoverBackgroundColor: ["#FF6384", "#36A2EB", "#FFCE56", "#008000"],
+  //       },
+  //     ],
+  //   };
 
   const options = {
     scales: {
@@ -122,13 +135,11 @@ export default function ChartsAppleContent() {
       ],
     },
   };
-
   return (
     <div className="chart-container">
       <div className="charts-wrapper">
         <div>
-          <h3>Apple, Inc. - Quarterly Statements 2017-2019</h3>
-          {/* <Dropdown company={"apple"}/>   */}
+          <h3>Tesla, Inc. - Quarterly Statements 2018-2019</h3>
           <DropDown />
         </div>
       </div>
@@ -138,3 +149,4 @@ export default function ChartsAppleContent() {
     </div>
   );
 }
+
