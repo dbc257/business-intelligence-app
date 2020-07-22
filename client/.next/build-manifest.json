@@ -24,10 +24,6 @@
     "/_polyfills": [
       "static/runtime/polyfills.js"
     ],
-    "/about-us": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
-    ],
     "/index": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
