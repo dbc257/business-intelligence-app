@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Navbar from "../../components/Layouts/Navbar";
 import PageBanner from "../../components/Common/PageBanner";
-import ChartsFacebookContent from "../../components/Charts/ChartsFacebookContent";
+import ChartsAppleContent from "../../components/Charts/ChartsAppleContent";
 import Footer from "../../components/Layouts/Footer";
 
 class Charts extends Component {
@@ -12,10 +12,10 @@ class Charts extends Component {
         <PageBanner
           pageTitle="Charts"
           breadcrumbTextOne="Explore"
-          breadcrumbTextTwo="Facebook"
+          breadcrumbTextTwo="Apple, Inc."
           breadcrumbUrl="/explore"
         />
-        <ChartsFacebookContent />
+        <ChartsAppleContent />
 
         <Footer />
       </React.Fragment>

@@ -11,9 +11,9 @@ class Charts extends Component {
         <Navbar />
         <PageBanner
           pageTitle="Charts"
-          breadcrumbTextOne="Home"
-          breadcrumbTextTwo="Charts"
-          breadcrumbUrl="/"
+          breadcrumbTextOne="Explore"
+          breadcrumbTextTwo="Tesla, Inc."
+          breadcrumbUrl="/explore"
         />
         <ChartsTeslaContent />
 
