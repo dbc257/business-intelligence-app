@@ -138,7 +138,10 @@ router.get("/", (req, res) => {
         { symbol: "AAPL", date: "2017-04-01" },
       ],
     },
-  }).then((result) => res.json(result));
+  }).then((result) => {
+    console.log(JSON.stringify(result))
+    res.json(result);
+  })
 });
 
 module.exports = router;

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Line } from "react-chartjs-2";
+import Dropdown from "../../components/Buttons/DropDown";
 
 function ChartsAppleContent() {
   const [financials, setFinancials] = useState([]);
@@ -8,13 +9,17 @@ function ChartsAppleContent() {
     fetch("http://localhost:3001/apple")
       .then((response) => response.json())
       .then((result) => {
-        setFinancials(result);
+        let data = result.sort(function (a, b) {
+          let
+            aa = a.date.split('-').join(),
+            bb = b.date.split('-').join();
+          return aa < bb ? -1 : (aa > bb ? 1 : 0);
+        });
+        setFinancials(data);
       });
   }, []);
 
-  const labelsDate = financials.map((financeDate) => {
-    return financeDate.date;
-  });
+  const labelsDate = financials.map((data => data.date))
 
   const dataRevenue = financials.map((financeRevenue) => {
     return financeRevenue.revenue;
@@ -27,51 +32,6 @@ function ChartsAppleContent() {
   const dataProfit = financials.map((financeProfit) => {
     return financeProfit.grossProfit;
   });
-
-  // const barDataRevenue = {
-  //   labels: labelsDate,
-  //   datasets: [
-  //     {
-  //       label: "Revenue",
-  //       backgroundColor: "rgba(255,99,132,0.2)",
-  //       borderColor: "rgba(255,99,132,1)",
-  //       borderWidth: 1,
-  //       hoverBackgroundColor: "rgba(255,99,132,0.4)",
-  //       hoverBorderColor: "rgba(255,99,132,1)",
-  //       data: dataRevenue,
-  //     },
-  //   ],
-  // };
-
-  // const barDataExpenses = {
-  //   labels: labelsDate,
-  //   datasets: [
-  //     {
-  //       label: "Expenses",
-  //       backgroundColor: "rgba(255,99,132,0.2)",
-  //       borderColor: "rgba(255,99,132,1)",
-  //       borderWidth: 1,
-  //       hoverBackgroundColor: "rgba(255,99,132,0.4)",
-  //       hoverBorderColor: "rgba(255,99,132,1)",
-  //       data: dataExpenses,
-  //     },
-  //   ],
-  // };
-
-  //   const barDataProfit = {
-  //     labels: labelsDate,
-  //     datasets: [
-  //       {
-  //         label: "Gross Profits",
-  //         backgroundColor: "rgba(255,99,132,0.2)",
-  //         borderColor: "rgba(255,99,132,1)",
-  //         borderWidth: 1,
-  //         hoverBackgroundColor: "rgba(255,99,132,0.4)",
-  //         hoverBorderColor: "rgba(255,99,132,1)",
-  //         data: dataProfit,
-  //       },
-  //     ],
-  //   };
 
   const lineData = {
     labels: labelsDate,
@@ -142,17 +102,6 @@ function ChartsAppleContent() {
     ],
   };
 
-  //   const pieDataProfit = {
-  //     labels: labelsDate,
-  //     datasets: [
-  //       {
-  //         data: dataProfit,
-  //         backgroundColor: ["#FF6384", "#36A2EB", "#FFCE56", "#008000"],
-  //         hoverBackgroundColor: ["#FF6384", "#36A2EB", "#FFCE56", "#008000"],
-  //       },
-  //     ],
-  //   };
-
   const options = {
     scales: {
       yAxes: [
@@ -173,11 +122,13 @@ function ChartsAppleContent() {
       ],
     },
   };
+
   return (
     <div className="chart-container">
       <div className="charts-wrapper">
         <div>
-          <h3>Apple, Inc. - Quarterly Statements 2019-2017</h3>
+          <h3>Apple, Inc. - Quarterly Statements 2017-2019</h3>
+          <Dropdown />  
         </div>
       </div>
       <div className="chart-info">

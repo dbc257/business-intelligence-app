@@ -9,7 +9,13 @@ function ChartsTelsaContent() {
     fetch("http://localhost:3001/tesla")
       .then((response) => response.json())
       .then((result) => {
-        setFinancials(result);
+        let data = result.sort(function (a, b) {
+          let
+            aa = a.date.split('-').join(),
+            bb = b.date.split('-').join();
+          return aa < bb ? -1 : (aa > bb ? 1 : 0);
+        });
+        setFinancials(data);
       });
   }, []);
 
@@ -178,7 +184,7 @@ function ChartsTelsaContent() {
     <div className="chart-container">
       <div className="charts-wrapper">
         <div>
-          <h3>Tesla, Inc. - Quarterly Statements 2019-2017</h3>
+          <h3>Tesla, Inc. - Quarterly Statements 2017-2019</h3>
         </div>
       </div>
       <div className="chart-info">

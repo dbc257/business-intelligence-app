@@ -4725,3 +4725,272 @@ Go Top CSS
     }
   }
 }
+
+
+
+.dropdown-menu-normal {
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
+  background: $white-color;
+  position: absolute;
+  border: none;
+  top: 80px;
+  left: 0;
+  width: 230px;
+  z-index: 99;
+  display: block;
+  opacity: 0;
+  visibility: hidden;
+  border-radius: 0;
+  transition: all 0.3s ease-in-out;
+  padding: {
+    top: 20px;
+    left: 25px;
+    right: 25px;
+    bottom: 20px;
+  }
+  li {
+    padding: 0;
+    a {
+      text-transform: capitalize;
+      padding: 8px 15px;
+      padding-left: 0;
+      margin: 0;
+      position: relative;
+      color: $black-color;
+      font: {
+        size: 15.5px;
+        weight: 400;
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        left: -5px;
+        top: 50%;
+        width: 0;
+        transition: $transition;
+        height: 1px;
+        background-color: $main-color;
+        transform: translateY(-50%);
+      }
+      &:hover,
+      &:focus,
+      &.active {
+        color: $main-color;
+        padding-left: 26px;
+
+        &::before {
+          width: 20px;
+        }
+      }
+    }
+    .dropdown-menu-normal {
+      left: -245px;
+      top: 0;
+      opacity: 0;
+      visibility: hidden;
+      li {
+        a {
+          color: #696997;
+          &:hover,
+          &:focus,
+          &.active {
+            color: $main-color;
+          }
+        }
+        .dropdown-menu-normal {
+          left: -245px;
+          top: 0;
+          opacity: 0;
+          visibility: hidden;
+          li {
+            a {
+              color: #696997;
+              text-transform: capitalize;
+
+              &:hover,
+              &:focus,
+              &.active {
+                color: $main-color;
+              }
+            }
+            .dropdown-menu-normal {
+              left: -245px;
+              top: 0;
+              opacity: 0;
+              visibility: hidden;
+              li {
+                a {
+                  color: #696997;
+                  text-transform: capitalize;
+                  &:hover,
+                  &:focus,
+                  &.active {
+                    color: $main-color;
+                  }
+                }
+                .dropdown-menu-normal {
+                  left: 195px;
+                  top: 0;
+                  opacity: 0;
+                  visibility: hidden;
+                  li {
+                    a {
+                      color: #696997;
+                      text-transform: capitalize;
+                      &:hover,
+                      &:focus,
+                      &.active {
+                        color: $main-color;
+                      }
+                    }
+                    .dropdown-menu-normal {
+                      left: 195px;
+                      top: 0;
+                      opacity: 0;
+                      visibility: hidden;
+                      li {
+                        a {
+                          color: #696997;
+                          text-transform: capitalize;
+
+                          &:hover,
+                          &:focus,
+                          &.active {
+                            color: $main-color;
+                          }
+                        }
+                        .dropdown-menu-normal {
+                          left: 195px;
+                          top: 0;
+                          opacity: 0;
+                          visibility: hidden;
+                          li {
+                            a {
+                              color: #696997;
+                              text-transform: capitalize;
+                              &:hover,
+                              &:focus,
+                              &.active {
+                                color: $main-color;
+                              }
+                            }
+                          }
+                        }
+                        &.active {
+                          a {
+                            color: $main-color;
+                          }
+                        }
+                        &:hover {
+                          .dropdown-menu-normal {
+                            opacity: 1;
+                            visibility: visible;
+                            top: -15px;
+                            transition: $transition;
+                          }
+                        }
+                      }
+                    }
+                    &.active {
+                      a {
+                        color: $main-color;
+                      }
+                    }
+                    &:hover {
+                      .dropdown-menu-normal {
+                        opacity: 1;
+                        visibility: visible;
+                        top: -15px;
+                        transition: $transition;
+                      }
+                    }
+                  }
+                }
+                &.active {
+                  a {
+                    color: $main-color;
+                  }
+                }
+                &:hover {
+                  .dropdown-menu-normal {
+                    opacity: 1;
+                    visibility: visible;
+                    top: -15px;
+                    transition: $transition;
+                  }
+                }
+              }
+            }
+            &.active {
+              a {
+                color: $main-color;
+              }
+            }
+            &:hover {
+              .dropdown-menu-normal {
+                opacity: 1;
+                visibility: visible;
+                top: -15px;
+                transition: $transition;
+              }
+            }
+          }
+        }
+        &.active {
+          a {
+            color: $main-color;
+          }
+        }
+        &:hover {
+          .dropdown-menu-normal {
+            opacity: 1;
+            visibility: visible;
+            top: -15px;
+            transition: $transition;
+          }
+        }
+      }
+    }
+    &.active {
+      a {
+        color: $main-color;
+      }
+    }
+    &:hover {
+      .dropdown-menu-normal {
+        opacity: 1;
+        visibility: visible;
+        top: -15px;
+        transition: $transition;
+      }
+    }
+  }
+  &:hover {
+    .dropdown-menu-normal {
+      opacity: 1;
+      visibility: visible;
+      top: 100%;
+      transition: $transition;
+    }
+  }
+}
+
+
+
+.other-option {
+  margin-left: 0;
+  margin-top: 5px;
+  .default-btn {
+    &.seo-btn {
+      padding: 10px 25px;
+      font-size: 15px;
+      background-color: transparent;
+      border: 1px solid $main-color;
+      color: $main-color;
+      &:hover {
+        background-color: $main-color;
+        color: $white-color;
+      }
+    }
+  }
+}
