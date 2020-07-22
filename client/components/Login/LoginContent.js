@@ -1,11 +1,15 @@
 // import React from "react";
 import React, { Component } from "react";
-import Router from "next/router"
+import Router from "next/router";
 // import loginImg from "../../public/images/login.svg";
 import axios from "axios";
 // import { connect } from "react-redux";
 // import * as actionCreators from "../../../store/creators/actionCreators";
 import { setAuthenticationHeader } from "../../utils/Auth";
+import { connect } from "react-redux";
+import { bindActionCreators } from "redux";
+import { authenticated } from "../../store/login/action";
+// import { wrapper } from "../../store/store";
 
 class LoginContent extends React.Component {
   constructor(props) {
@@ -14,6 +18,10 @@ class LoginContent extends React.Component {
       user: {},
     };
   }
+
+  // let authenticated = ({ authenticated}) => {
+  //   return authenticated(true)
+  // }
 
   handleLogin = (e) => {
     this.setState({
@@ -36,7 +44,7 @@ class LoginContent extends React.Component {
           localStorage.setItem("jsonwebtoken", token);
           setAuthenticationHeader(token);
           console.log(token);
-          //   this.props.onAuthenticated(true);
+          this.props.authenticated(true);
           alert(response.data.message);
           Router.push("/");
         } else {
@@ -59,7 +67,7 @@ class LoginContent extends React.Component {
         localStorage.setItem("jsonwebtoken", token);
         setAuthenticationHeader(token);
         console.log(token);
-        // this.props.onAuthenticated(true);
+        this.props.authenticated(true);
         alert(response.data.message);
         Router.push("/");
       } else {
@@ -168,15 +176,99 @@ class LoginContent extends React.Component {
   }
 }
 
+// const mapStateToProps = (state) => ({
+//   isLoggedIn: state.login.isLoggedIn,
+// });
+// export const getServerSideProps = wrapper.getServerSideProps(
+//   async ({ store }) => {
+//     store.dispatch(authenticated(true));
+//     // store.dispatch(addCount())
+//   }
+// );
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    authenticated: bindActionCreators(authenticated, dispatch),
+  };
+};
+
+export default connect(null, mapDispatchToProps)(LoginContent);
+
 // const mapDispatchToProps = (dispatch) => {
 //   return {
 //     onAuthenticated: () => dispatch(actionCreators.authenticated(true)),
 //   };
 // };
 
-// export default connect(null, mapDispatchToProps)(LoginJSX);
+// export default connect(null, mapDispatchToProps)(LoginContent);
 
-export default LoginContent;
+// const mapStateToProps = (state) => ({
+//   count: state.count.count,
+// })
+
+// const mapDispatchToProps = (dispatch) => {
+//   return {
+//     addCount: bindActionCreators(addCount, dispatch),
+//   }
+// }
+
+// export default LoginContent;
+
+// import { connect } from 'react-redux'
+// import { bindActionCreators } from 'redux'
+// import { addCount } from '../store/count/action'
+
+// const AddCount = ({ count, addCount }) => {
+//   return (
+//     <div>
+//       <style jsx>{`
+//         div {
+//           padding: 0 0 20px 0;
+//         }
+//       `}</style>
+//       <h1>
+//         AddCount: <span>{count}</span>
+//       </h1>
+//       <button onClick={addCount}>Add To Count</button>
+//     </div>
+//   )
+// }
+
+// import { useEffect } from 'react'
+// import { connect } from 'react-redux'
+// import { bindActionCreators } from 'redux'
+// import Page from '../components/Page'
+// import { addCount } from '../store/count/action'
+// import { wrapper } from '../store/store'
+// import { serverRenderClock, startClock } from '../store/tick/action'
+
+// const Other = (props) => {
+//   useEffect(() => {
+//     const timer = props.startClock()
+
+//     return () => {
+//       clearInterval(timer)
+//     }
+//   }, [props])
+
+//   return <Page title="Other Page" linkTo="/" />
+// }
+
+// export const getServerSideProps = wrapper.getServerSideProps(
+//   async ({ store }) => {
+//     store.dispatch(serverRenderClock(true))
+//     store.dispatch(addCount())
+//   }
+// )
+
+// const mapDispatchToProps = (dispatch) => {
+//   return {
+//     addCount: bindActionCreators(addCount, dispatch),
+//     startClock: bindActionCreators(startClock, dispatch),
+//   }
+// }
+
+// export default connect(null, mapDispatchToProps)(Other)
 
 /* <div className="base-container" ref={this.props.containerRef}>
         <div className="header">Login</div>

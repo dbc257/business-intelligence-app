@@ -1,8 +1,11 @@
 import React, { Component } from "react";
 import Link from "../../utils/ActiveLink";
-// import { connect } from "react-redux";
+import Button from "react-bootstrap/Button";
+// import Link from "next/Link";
 import { setAuthenticationHeader } from "../../utils/Auth";
-// import * as actionCreators from "../../store/creators/actionCreators";
+import { connect } from "react-redux";
+import { bindActionCreators } from "redux";
+import { authenticated } from "../../store/login/action";
 
 class Navbar extends Component {
   // Navbar
@@ -11,12 +14,14 @@ class Navbar extends Component {
     display: false,
     collapsed: true,
   };
-  // handleSignOut = () => {
-  //   // props.onAuthenticated(false);
-  //   this.localStorage.removeItem("jsonwebtoken");
-  //   this.localStorage.removeItem("jwt_access_token");
-  //   setAuthenticationHeader(null);
-  // };
+  handleSignOut = () => {
+    // props.onAuthenticated(false);
+    console.log("hello world");
+    this.props.authenticated(false);
+    localStorage.removeItem("jsonwebtoken");
+    localStorage.removeItem("jwt_access_token");
+    setAuthenticationHeader(null);
+  };
   toggleNavbar = () => {
     this.setState({
       collapsed: !this.state.collapsed,
@@ -86,14 +91,18 @@ class Navbar extends Component {
                 <div className={classOne} id="navbarSupportedContent">
                   <ul className="navbar-nav">
                     <li className="nav-item">
-                      <Link href="/" activeClassName="active">
-                        <a className="nav-link">Home</a>
-                      </Link>
+                      <Button variant="link" size="sm" className="nav-link">
+                        <Link href="/" activeClassName="active">
+                          <a className="nav-link">Home</a>
+                        </Link>
+                      </Button>
                     </li>
                     <li className="nav-item">
-                      <Link href="/explore" activeClassName="active">
-                        <a className="nav-link">Explore</a>
-                      </Link>
+                      <Button variant="link" size="sm" className="nav-link">
+                        <Link href="/explore" activeClassName="active">
+                          <a className="nav-link">Explore</a>
+                        </Link>
+                      </Button>
                     </li>
                     {/* <li className="nav-item">
                       <Link href="/charts" activeClassName="active">
@@ -101,30 +110,69 @@ class Navbar extends Component {
                       </Link>
                     </li> */}
                     <li className="nav-item">
-                      <Link href="/about-us" activeClassName="active">
-                        <a className="nav-link">About Us</a>
-                      </Link>
+                      <Button variant="link" size="sm" className="nav-link">
+                        <Link href="/about-us" activeClassName="active">
+                          <a className="nav-link">About Us</a>
+                        </Link>
+                      </Button>
                     </li>
                     <li className="nav-item">
-                      <Link href="/login" activeClassName="active">
-                        <a className="nav-link">Login</a>
-                      </Link>
+                      <Button variant="link" size="sm" className="nav-link">
+                        <Link href="/login" activeClassName="active">
+                          <a className="nav-link">Login</a>
+                        </Link>
+                      </Button>
                     </li>
 
-                    <li className="nav-item">
-                      <Link href="/register" activeClassName="active">
-                        <a className="nav-link">Register</a>
+                    {this.props.isLoggedIn == false ? (
+                      <li className="nav-item">
+                        <Button variant="link" size="sm" className="nav-link">
+                          <Link href="/register" activeClassName="active">
+                            <a className="nav-link">Register</a>
+                          </Link>
+                        </Button>
+                      </li>
+                    ) : (
+                      <li className="nav-item">
+                        <Link href="/" activeClassName="active">
+                          <Button
+                            variant="link"
+                            size="sm"
+                            onClick={this.handleSignOut}
+                            className="nav-link"
+                          >
+                            <a className="nav-link">Signout</a>
+                          </Button>
+                        </Link>
+                      </li>
+                    )}
+                    {/* <li className="nav-item">
+                      <Link href="/" activeClassName="active">
+                      <Button
+                        variant="link"
+                        size="sm"
+                        onClick={this.handleSignOut}
+                        className="nav-link"
+                      >
+                        <a className="nav-link">Signout</a>
+                      </Button>
                       </Link>
-                    </li>
+                    </li> */}
 
                     {/* <li className="nav-item">
                       <Link
-                        href="/signout"
+                        href="/register"
                         activeClassName="active"
-                        type="button"
-                        onClick={this.handleSignOut()}
+                        onClick={this.handleSignOut}
                       >
+                        {/* <button
+                        // href="/"
+                        // activeClassName="active"
+                        // type="button"
+                        onClick={this.handleSignOut}
+                      > 
                         <a className="nav-link">Signout</a>
+                         </button>
                       </Link>
                     </li> */}
                   </ul>
@@ -152,4 +200,16 @@ class Navbar extends Component {
 // };
 // export default connect(mapStateToProps, mapDispatchToProps)(Navbar);
 
-export default Navbar;
+// export default Navbar;
+const mapStateToProps = (state) => {
+  return {
+    isLoggedIn: state.login.isLoggedIn,
+  };
+};
+const mapDispatchToProps = (dispatch) => {
+  return {
+    authenticated: bindActionCreators(authenticated, dispatch),
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Navbar);
