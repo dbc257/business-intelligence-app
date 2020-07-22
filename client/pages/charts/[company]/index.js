@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Line } from "react-chartjs-2";
+import { Line, Bar } from "react-chartjs-2";
 import Navbar from "../../../components/Layouts/Navbar";
 import PageBanner from "../../../components/Common/PageBanner";
 import Footer from "../../../components/Layouts/Footer";
@@ -138,6 +138,8 @@ const Company = () => {
         },
     };
 
+
+
     return (
         <React.Fragment>
             <Navbar />
@@ -149,15 +151,46 @@ const Company = () => {
             />
             <div className="chart-container">
                 <div className="charts-wrapper">
-                    <div>
-                        <h3>{companyName}, Inc. - Quarterly Statements 2017-2020 <DropdownMenu /></h3>
+                    <DropdownMenu />
+                    <div className="company-title">
+                        <h3>{companyName}, Inc. - Quarterly Statements 2017-2020</h3>
                     </div>
                 </div>
             </div>
-            <div className="chart-info">
-                <Line data={lineData} options={options} />
+            <div className="row">
+                <div className="col1">
+                    <Line data={lineData} options={options} />
+                </div> 
+                <div className="col1">
+                    <Bar data={lineData} />
+                </div>
             </div>
             <Footer />
+            <style jsx>
+                {`
+                .col1 {
+                    width: 50%;
+                    float: left;
+                }
+                .row:after {
+                    content: "";
+                    display: table;
+                    clear: both;
+                }
+                .charts-wrapper {
+                    display: flex;
+                }
+                .company-title {
+                    text-align: center;
+                    margin: 0 auto;
+                }
+                @media screen and (max-width: 600px) {
+                    .col1 {
+                        width: 100%;
+                    }
+                }
+                `}
+            </style>
         </React.Fragment>
     );
 }
