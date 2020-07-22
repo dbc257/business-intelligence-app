@@ -1,5 +1,5 @@
 import React from "react";
-import Router from "next/Router"
+import Router from "next/Router";
 // import loginImg from "../../public/images/login.svg";
 
 class RegisterContent extends React.Component {
@@ -65,7 +65,7 @@ class RegisterContent extends React.Component {
               <div className="newsletter-form">
                 <input
                   onChange={this.handleRegister}
-                  type="text"
+                  type="password"
                   name="password"
                   placeholder="Password"
                   className="input-newsletter"

@@ -116,13 +116,15 @@ class Navbar extends Component {
                         </Link>
                       </Button>
                     </li>
-                    <li className="nav-item">
-                      <Button variant="link" size="sm" className="nav-link">
-                        <Link href="/login" activeClassName="active">
-                          <a className="nav-link">Login</a>
-                        </Link>
-                      </Button>
-                    </li>
+                    {this.props.isLoggedIn == false ? (
+                      <li className="nav-item">
+                        <Button variant="link" size="sm" className="nav-link">
+                          <Link href="/login" activeClassName="active">
+                            <a className="nav-link">Login</a>
+                          </Link>
+                        </Button>
+                      </li>
+                    ) : null}
 
                     {this.props.isLoggedIn == false ? (
                       <li className="nav-item">
