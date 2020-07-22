@@ -1,3 +1,4 @@
+import { wrapper } from "../store/store";
 import "../public/css/bootstrap.min.css";
 import "../public/css/animate.min.css";
 import "../public/css/flaticon.css";
@@ -13,7 +14,9 @@ import Head from "next/head";
 import Loader from "../components/Shared/Loader";
 import GoTop from "../components/Shared/GoTop";
 
-export default class MyApp extends App {
+// export default
+
+class WrappedApp extends App {
   static async getInitialProps({ Component, ctx }) {
     return {
       pageProps: Component.getInitialProps
@@ -27,10 +30,7 @@ export default class MyApp extends App {
     loading: true,
   };
   componentDidMount() {
-    this.timerHandle = setTimeout(
-      () => this.setState({ loading: false }),
-      700
-    );
+    this.timerHandle = setTimeout(() => this.setState({ loading: false }), 700);
   }
   componentWillUnmount() {
     if (this.timerHandle) {
@@ -41,6 +41,7 @@ export default class MyApp extends App {
 
   render() {
     const { Component, pageProps } = this.props;
+    // const WrappedApp = ({ Component, pageProps }) => {
     return (
       <React.Fragment>
         <Head>
@@ -71,3 +72,9 @@ export default class MyApp extends App {
     );
   }
 }
+
+// const WrappedApp = ({ Component, pageProps }) => {
+//   return <Component {...pageProps} />
+// }
+
+export default wrapper.withRedux(WrappedApp);
