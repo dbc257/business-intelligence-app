@@ -12,6 +12,7 @@ const Company = () => {
     const { company } = router.query
 
     const [financials, setFinancials] = useState([]);
+    const [companyName, setCompanyName] = useState("")
 
     useEffect(() => {
         fetch(`http://localhost:3001/${company}`)
@@ -24,8 +25,11 @@ const Company = () => {
                     return aa < bb ? -1 : (aa > bb ? 1 : 0);
                 })
                 setFinancials(data);
+
+                let companyLetter = (company.charAt(0).toUpperCase())
+                setCompanyName(companyLetter + company.slice(1))
             })
-    }, [])
+    })
 
     const labelsDate = financials.map((financeDate) => {
         return financeDate.date;
@@ -134,16 +138,13 @@ const Company = () => {
         },
     };
 
-    let companyLetter = (company.charAt(0).toUpperCase())
-    let companyName = companyLetter + company.slice(1)
-
     return (
         <React.Fragment>
             <Navbar />
             <PageBanner
                 pageTitle="Charts"
                 breadcrumbTextOne="Explore"
-                breadcrumbTextTwo={`${company}, Inc.`}
+                breadcrumbTextTwo={`${companyName}, Inc.`}
                 breadcrumbUrl="/explore"
             />
             <div className="chart-container">

@@ -16,10 +16,10 @@ export default function DropdownMenu() {
                 <Dropdown.Item><Link href="/charts/[company]/[year]" as={`/charts/${company}/2019`} ><a>2019-2020</a></Link></Dropdown.Item>
             </NavLink>
             <NavLink>
-                <Dropdown.Item><Link href="/charts/apple/2018" as={`/charts/${company}/2018`}><a>2018-2019</a></Link></Dropdown.Item>
+                <Dropdown.Item><Link href="/charts/[company]/[year]" as={`/charts/${company}/2018`}><a>2018-2019</a></Link></Dropdown.Item>
             </NavLink>
             <NavLink>
-                <Dropdown.Item><Link href="/charts/apple/2017" as={`/charts/${company}/2017`}><a>2017-2018</a></Link></Dropdown.Item>
+                <Dropdown.Item><Link href="/charts/[company]/[year]" as={`/charts/${company}/2017`}><a>2017-2018</a></Link></Dropdown.Item>
             </NavLink>
         </DropdownButton>
     )
