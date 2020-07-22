@@ -20,11 +20,7 @@
     "/_polyfills": [
       "static/runtime/polyfills.js"
     ],
-    "/charts/apple": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
-    ],
-    "/charts/facebook": [
+    "/about-us": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],

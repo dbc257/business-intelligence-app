@@ -137,6 +137,7 @@ app.post("/api/guest-login", (req, res) => {
               message: "You are now logged in! ",
               success: true,
               token: token,
+              userId: persistedUser.id,
             });
           }
         } else {
