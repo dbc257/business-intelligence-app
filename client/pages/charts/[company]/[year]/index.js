@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Line } from "react-chartjs-2";
+import { Line, Bar } from "react-chartjs-2";
 import Navbar from "../../../../components/Layouts/Navbar";
 import PageBanner from "../../../../components/Common/PageBanner";
 import Footer from "../../../../components/Layouts/Footer";
@@ -9,7 +9,9 @@ import { useRouter } from "next/router"
 function Charts() {
     const router = useRouter()
     const { company, year } = router.query
+
     const [financials, setFinancials] = useState([]);
+    const [companyName, setCompanyName] = useState("")
 
     useEffect(() => {
         fetch(`http://localhost:3001/${company}/${year}`)
@@ -22,8 +24,10 @@ function Charts() {
                     return aa < bb ? -1 : (aa > bb ? 1 : 0);
                 });
                 setFinancials(data);
+                let companyLetter = (company.charAt(0).toUpperCase())
+                setCompanyName(companyLetter + company.slice(1))
             });
-    }, []);
+    });
 
     const labelsDate = financials.map((financeDate) => {
         return financeDate.date;
@@ -131,30 +135,57 @@ function Charts() {
         },
     };
 
-    let companyLetter = (company.charAt(0).toUpperCase())
-    let companyName = companyLetter + company.slice(1)
-
     return (
         <React.Fragment>
             <Navbar />
             <PageBanner
                 pageTitle="Charts"
                 breadcrumbTextOne="Explore"
-                breadcrumbTextTwo="Apple, Inc."
+                breadcrumbTextTwo={`${companyName}, Inc.`}
                 breadcrumbUrl="/explore"
             />
             <div className="chart-container">
                 <div className="charts-wrapper">
-                    <div>
-                        <h3>{companyName}, Inc. - Quarterly Statements {year}-{Number(year) + 1}</h3>
-                        <DropdownMenu />
+                    <DropdownMenu />
+                    <div className="company-title">
+                        <h3>{companyName}, Inc. - Quarterly Statements - {year == "2019" ? year + "-" + (Number(year) + 1) : year }</h3>
                     </div>
                 </div>
             </div>
-            <div className="chart-info">
-                <Line data={lineData} options={options} />
+            <div className="row">
+                <div className="col1">
+                    <Line data={lineData} options={options} />
+                </div>
+                <div className="col1">
+                    <Bar data={lineData} />
+                </div>
             </div>
             <Footer />
+            <style jsx>
+                {`
+                .col1 {
+                    width: 50%;
+                    float: left;
+                }
+                .row:after {
+                    content: "";
+                    display: table;
+                    clear: both;
+                }
+                .charts-wrapper {
+                    display: flex;
+                }
+                .company-title {
+                    text-align: center;
+                    margin: 0 auto;
+                }
+                @media screen and (max-width: 600px) {
+                    .col1 {
+                        width: 100%;
+                    }
+                }
+                `}
+            </style>
         </React.Fragment>
     );
 }
