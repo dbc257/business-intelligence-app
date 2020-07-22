@@ -14,8 +14,9 @@ const bindMiddleware = (middleware) => {
 
 const combinedReducer = combineReducers({
   login,
-  company,
+  // company,
 });
+// const reducer = { login };
 
 const reducer = (state, action) => {
   if (action.type === HYDRATE) {
@@ -26,6 +27,7 @@ const reducer = (state, action) => {
     if (state.login) nextState.login = state.login; // preserve count value on client side navigation
     return nextState;
   } else {
+    // return combinedReducer(state, action);
     return combinedReducer(state, action);
   }
 };

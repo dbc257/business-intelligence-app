@@ -14,6 +14,9 @@ import CustomerStyleTwo from "../components/Common/CustomerStyleTwo";
 import Footer from "../components/Layouts/Footer";
 import { connect } from "react-redux";
 // import { authenticated } from "../store/login/action";
+import { bindActionCreators } from "redux";
+import { authenticated } from "../store/login/action";
+import { wrapper } from "../store/store";
 
 class Index4 extends Component {
   render() {

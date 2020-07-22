@@ -37,18 +37,18 @@ class Login extends Component {
 
 export const getServerSideProps = wrapper.getServerSideProps(
   async ({ store }) => {
-    store.dispatch(authenticated(true));
+    store.dispatch(authenticated);
     // store.dispatch(addCount())
   }
 );
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    // isLoggedIn: bindActionCreators(authenticated, dispatch),
-    authenticated: bindActionCreators(authenticated(true), dispatch),
-    // startClock: bindActionCreators(startClock, dispatch),
-  };
-};
+// const mapDispatchToProps = (dispatch) => {
+//   return {
+//     // isLoggedIn: bindActionCreators(authenticated, dispatch),
+//     authenticated: bindActionCreators(authenticated(true), dispatch),
+//     // startClock: bindActionCreators(startClock, dispatch),
+//   };
+// };
 // export default Login;
-// export default connect((state) => state)(Login);
-export default connect(null, mapDispatchToProps)(Login);
+export default connect((state) => state)(Login);
+// export default connect(null, mapDispatchToProps)(Login);

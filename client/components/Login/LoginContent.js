@@ -9,6 +9,7 @@ import { setAuthenticationHeader } from "../../utils/Auth";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import { authenticated } from "../../store/login/action";
+// import { wrapper } from "../../store/store";
 
 class LoginContent extends React.Component {
   constructor(props) {
@@ -43,7 +44,7 @@ class LoginContent extends React.Component {
           localStorage.setItem("jsonwebtoken", token);
           setAuthenticationHeader(token);
           console.log(token);
-          authenticated(true);
+          this.props.authenticated(true);
           alert(response.data.message);
           Router.push("/");
         } else {
@@ -66,7 +67,7 @@ class LoginContent extends React.Component {
         localStorage.setItem("jsonwebtoken", token);
         setAuthenticationHeader(token);
         console.log(token);
-        authenticated(true);
+        this.props.authenticated(true);
         alert(response.data.message);
         Router.push("/");
       } else {
@@ -175,17 +176,23 @@ class LoginContent extends React.Component {
   }
 }
 
-const mapStateToProps = (state) => ({
-  isLoggedIn: state.login.isLoggedIn,
-});
+// const mapStateToProps = (state) => ({
+//   isLoggedIn: state.login.isLoggedIn,
+// });
+// export const getServerSideProps = wrapper.getServerSideProps(
+//   async ({ store }) => {
+//     store.dispatch(authenticated(true));
+//     // store.dispatch(addCount())
+//   }
+// );
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    authenticated: bindActionCreators(authenticated(true), dispatch),
+    authenticated: bindActionCreators(authenticated, dispatch),
   };
 };
 
-export default connect(mapDispatchToProps, mapDispatchToProps)(LoginContent);
+export default connect(null, mapDispatchToProps)(LoginContent);
 
 // const mapDispatchToProps = (dispatch) => {
 //   return {
