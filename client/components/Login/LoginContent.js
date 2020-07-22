@@ -1,5 +1,6 @@
 // import React from "react";
 import React, { Component } from "react";
+import Router from "next/router"
 // import loginImg from "../../public/images/login.svg";
 import axios from "axios";
 // import { connect } from "react-redux";
@@ -37,7 +38,7 @@ class LoginContent extends React.Component {
           console.log(token);
           //   this.props.onAuthenticated(true);
           alert(response.data.message);
-          // this.props.history.push("/");
+          Router.push("/");
         } else {
           alert(response.data.message);
           alert("response failed");
@@ -60,7 +61,7 @@ class LoginContent extends React.Component {
         console.log(token);
         // this.props.onAuthenticated(true);
         alert(response.data.message);
-        // this.props.history.push("/");
+        Router.push("/");
       } else {
         alert(response.data.message);
         alert("response failed");

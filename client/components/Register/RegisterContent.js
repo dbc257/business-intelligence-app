@@ -1,4 +1,5 @@
 import React from "react";
+import Router from "next/Router"
 // import loginImg from "../../public/images/login.svg";
 
 class RegisterContent extends React.Component {
@@ -29,7 +30,7 @@ class RegisterContent extends React.Component {
       .then((res) => res.json())
       .then((response) => {
         alert(response.message);
-        // this.props.history.push("/login");
+        Router.push("/login");
       });
   };
 
