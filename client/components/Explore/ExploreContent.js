@@ -30,7 +30,7 @@ class ExploreContent extends Component {
                   in the United States and internationally.
                 </p>
 
-                <Link href="/charts/tesla" as="/charts/tesla">
+                <Link href="/charts/[company]" as="/charts/tesla">
                   {/* <Link href="/charts/[company]" as="/charts/telsa"> */}
                   <a className="service-btn">
                     See Charts
@@ -53,7 +53,7 @@ class ExploreContent extends Component {
                   personal computers, and in-home devices worldwide.
                 </p>
                 {/* <Link href="/charts" as="/charts"> */}
-                <Link href="/charts/facebook" as="/charts/facebook">
+                <Link href="/charts/[company]" as="/charts/facebook">
                   <a className="service-btn">
                     See Charts
                     <i className="flaticon-right"></i>
@@ -73,7 +73,7 @@ class ExploreContent extends Component {
                   personal computers, tablets, wearables, and accessories
                   worldwide. It also sells various related services.
                 </p>
-                <Link href="/charts/apple" as="/charts/apple">
+                <Link href="/charts/[company]" as="/charts/apple">
                   {/* <Link href="/charts/[company]" as="/charts/apple"> */}
                   <a className="service-btn">
                     See Charts
