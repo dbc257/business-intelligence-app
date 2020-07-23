@@ -3,9 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+    "scripts": {
+      "dev": "next",
+      "build": "next build",
+      "start": "next start"
+    },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dbc257/CPM-Cube.git"
