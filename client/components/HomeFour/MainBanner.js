@@ -21,10 +21,10 @@ class MainBanner extends Component {
                   <div className="main-banner-content">
                     <h1>Applying Business Intelligence To Life</h1>
                     <p>
-                      The Business Intelligence (BI) Cube enables users to build
-                      BI applications by providing capabilities in two
-                      categories: analysis, such as online analytical processing
-                      (OLAP), and information delivery, such as dashboards.
+                      The Business Intelligence (BI) Cube enables users to
+                      access business information via two categories: analysis,
+                      such as online analytical processing (OLAP), and
+                      information delivery, such as dashboards.
                     </p>
 
                     <div className="banner-btn">
