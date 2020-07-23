@@ -195,7 +195,7 @@ const Company = () => {
                     <Line data={lineData} options={options} />
                 </div> 
                 <div className="col1">
-                    <Bar data={lineData} />
+                    <Bar data={barData} options={options} />
                 </div>
             </div>
             <Footer />
