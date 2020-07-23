@@ -96,32 +96,38 @@ class Navbar extends Component {
 
                 <div className={classOne} id="navbarSupportedContent">
                   <ul className="navbar-nav">
-                    <li className="nav-item">
-                      <Button variant="link" size="sm" className="nav-link">
-                        <Link href="/" activeClassName="active">
-                          <a className="nav-link">Home</a>
-                        </Link>
-                      </Button>
-                    </li>
-                    <li className="nav-item">
-                      <Button variant="link" size="sm" className="nav-link">
-                        <Link href="/explore" activeClassName="active">
-                          <a className="nav-link">Explore</a>
-                        </Link>
-                      </Button>
-                    </li>
+                    {this.props.isLoggedIn == false ? (
+                      <li className="nav-item">
+                        <Button variant="link" size="sm" className="nav-link">
+                          <Link href="/" activeClassName="active">
+                            <a className="nav-link">Home</a>
+                          </Link>
+                        </Button>
+                      </li>
+                    ) : null}
+                    {this.props.isLoggedIn == false ? (
+                      <li className="nav-item">
+                        <Button variant="link" size="sm" className="nav-link">
+                          <Link href="/explore" activeClassName="active">
+                            <a className="nav-link">Explore</a>
+                          </Link>
+                        </Button>
+                      </li>
+                    ) : null}
                     {/* <li className="nav-item">
                       <Link href="/charts" activeClassName="active">
                         <a className="nav-link">Charts</a>
                       </Link>
                     </li> */}
-                    <li className="nav-item">
-                      <Button variant="link" size="sm" className="nav-link">
-                        <Link href="/about-us" activeClassName="active">
-                          <a className="nav-link">About Us</a>
-                        </Link>
-                      </Button>
-                    </li>
+                    {this.props.isLoggedIn == false ? (
+                      <li className="nav-item">
+                        <Button variant="link" size="sm" className="nav-link">
+                          <Link href="/about-us" activeClassName="active">
+                            <a className="nav-link">About Us</a>
+                          </Link>
+                        </Button>
+                      </li>
+                    ) : null}
                     {this.props.isLoggedIn == false ? (
                       <li className="nav-item">
                         <Button variant="link" size="sm" className="nav-link">

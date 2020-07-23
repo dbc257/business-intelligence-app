@@ -8,6 +8,11 @@ import GetStartedProject from "../components/Common/GetStartedProject";
 import TeamMember from "../components/Common/TeamMember";
 // import Customers from "../components/Common/Customers";
 import Footer from "../components/Layouts/Footer";
+import { connect } from "react-redux";
+// import { authenticated } from "../store/login/action";
+import { bindActionCreators } from "redux";
+import { authenticated } from "../store/login/action";
+import { wrapper } from "../store/store";
 
 class AboutUs extends Component {
   render() {
@@ -35,5 +40,12 @@ class AboutUs extends Component {
     );
   }
 }
+export const getServerSideProps = wrapper.getServerSideProps(
+  async ({ store }) => {
+    store.dispatch(authenticated(true));
+    // store.dispatch(addCount())
+  }
+);
 
-export default AboutUs;
+export default connect((state) => state)(AboutUs);
+// export default AboutUs;
