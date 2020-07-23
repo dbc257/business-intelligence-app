@@ -13,6 +13,13 @@ export default function DropdownMenu() {
     <DropdownButton id="dropdown-basic-button" title="Other metrics">
       <NavLink>
         <Dropdown.Item>
+          <Link href="/charts/[company]" as={`/charts/${company}`}>
+            <a>2017-2020</a>
+          </Link>
+        </Dropdown.Item>
+      </NavLink>
+      <NavLink>
+        <Dropdown.Item>
           <Link href="/charts/[company]/[year]" as={`/charts/${company}/2019`}>
             <a>2019-2020</a>
           </Link>

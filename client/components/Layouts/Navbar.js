@@ -59,17 +59,23 @@ class Navbar extends Component {
               <nav className="navbar navbar-expand-md navbar-light">
                 <Link href="/">
                   <a className="navbar-brand">
-                    <img
-                      src="/images/logo-white.png"
-                      className="white-logo"
-                      alt="logo"
-                    />{" "}
-                    <label className="white-logo">BI Cube</label>
-                    <img
-                      src="/images/logo-white.png"
-                      className="black-logo"
-                      alt="logo"
-                    />
+                    <div className="white-logo">
+                      <img
+                        src="/images/logo-white.png"
+                        // className="white-logo"
+                        alt="logo"
+                      />{" "}
+                      <label>BI Cube</label>
+                    </div>
+                    <div className="black-logo">
+                      {/* <label className="white-logo">BI Cube</label> */}
+                      <img
+                        src="/images/logo-white.png"
+                        // className="black-logo"
+                        alt="logo"
+                      />{" "}
+                      <label>BI Cube</label>
+                    </div>
                   </a>
                 </Link>
 
