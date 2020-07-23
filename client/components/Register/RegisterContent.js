@@ -1,5 +1,5 @@
 import React from "react";
-import Router from "next/Router";
+import Router from "next/router";
 // import loginImg from "../../public/images/login.svg";
 
 class RegisterContent extends React.Component {
