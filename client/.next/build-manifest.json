@@ -20,10 +20,6 @@
     "/_polyfills": [
       "static/runtime/polyfills.js"
     ],
-    "/charts/[company]": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
-    ],
     "/charts/[company]/[year]": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
