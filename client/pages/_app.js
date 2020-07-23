@@ -45,19 +45,19 @@ class WrappedApp extends App {
     return (
       <React.Fragment>
         <Head>
-          <title>BI Cube - Business Intelligence Cube</title>
+          <title>BI App - Business Intelligence App</title>
           <meta
             name="description"
-            content="BI Cube - Business Intelligence Cube"
+            content="BI App - Business Intelligence App"
           />
           <meta
             name="og:title"
             property="og:title"
-            content="BI Cube - Business Intelligence Cube"
+            content="BI App - Business Intelligence App"
           ></meta>
           <meta
             name="twitter:card"
-            content="BI Cube - Business Intelligence Cube"
+            content="BI App - Business Intelligence App"
           ></meta>
         </Head>
 
