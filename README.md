@@ -57,7 +57,7 @@ An app designed with health and fitness in mind. Capable of tracking a users cal
 
 ## Website-Link
 
-[Business Intelligence (BI) App](https://business-intelligence-app.vercel.app/)
+[Business Intelligence App](https://business-intelligence-app.vercel.app/)
 
 ## Screenshots
 
