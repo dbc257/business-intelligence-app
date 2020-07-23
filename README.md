@@ -160,7 +160,7 @@ This project is licensed under the [Attribution 4.0
 International](LICENSE.md) Creative Commons License - see the
 [LICENSE.md](LICENSE.md) file for details -->
 
-## Contributors :checkered_flag:
+## Contributors
 
 - **David Carlisle**
 - **Victor Petsev**
