@@ -31,10 +31,10 @@ class AboutUs extends Component {
                     <i className="flaticon-tick"></i>
                     Bar Charts
                   </li>
-                  <li>
+                  {/* <li>
                     <i className="flaticon-tick"></i>
                     Pie Charts
-                  </li>
+                  </li> */}
                   {/* <li>
                     <i className="flaticon-tick"></i>
                     Advanced Advisory Team
