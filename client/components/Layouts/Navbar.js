@@ -65,16 +65,16 @@ class Navbar extends Component {
                         // className="white-logo"
                         alt="logo"
                       />{" "}
-                      <label>BI Cube</label>
+                      <label>BI App</label>
                     </div>
                     <div className="black-logo">
-                      {/* <label className="white-logo">BI Cube</label> */}
+                      {/* <label className="white-logo">BI App</label> */}
                       <img
                         src="/images/logo-white.png"
                         // className="black-logo"
                         alt="logo"
                       />{" "}
-                      <label>BI Cube</label>
+                      <label>BI App</label>
                     </div>
                   </a>
                 </Link>

@@ -1,7 +1,7 @@
 {
-  "name": "business-intelligence-cube-app",
+  "name": "business-intelligence-app",
   "version": "1.1.0",
-  "description": "BI Cube - Business Intelligence Cube",
+  "description": "BI App - Business Intelligence App",
   "main": "index.js",
   "scripts": {
     "dev": "next",

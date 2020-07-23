@@ -174,7 +174,7 @@ class Footer extends Component {
           <div className="container">
             <div className="row align-items-center">
               <div className="col-lg-6 col-md-6">
-                <p>&copy; {currentYear} Business Intelligence Cube</p>
+                <p>&copy; {currentYear} Business Intelligence App</p>
               </div>
 
               {/* <div className="col-lg-6 col-md-6">
