@@ -14,7 +14,7 @@ function Charts() {
     const [companyName, setCompanyName] = useState("")
 
     useEffect(() => {
-        fetch(`https://bi-cube.herokuapp.com//${company}/${year}`)
+        fetch(`https://bi-cube.herokuapp.com/${company}/${year}`)
             .then((response) => response.json())
             .then((result) => {
                 let data = result.sort(function (a, b) {

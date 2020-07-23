@@ -20,7 +20,7 @@ class RegisterContent extends React.Component {
   };
 
   handleRegisterPost = () => {
-    fetch("https://bi-cube.herokuapp.com//register", {
+    fetch("https://bi-cube.herokuapp.com/register", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
