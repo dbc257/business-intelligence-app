@@ -40,19 +40,52 @@ const Company = () => {
     });
 
     const dataExpenses = financials.map((financeExpenses) => {
-        return financeExpenses.costAndExpenses;
+        return financeExpenses.costOfRevenue;
     });
 
     const dataProfit = financials.map((financeProfit) => {
         return financeProfit.grossProfit;
     });
 
+    const barData = {
+        labels: labelsDate,
+        datasets: [
+            {
+                label: "Profits",
+                backgroundColor: "rgba(75,192,192,0.4)",
+                borderColor: "green",
+                borderWidth: 1,
+                hoverBackgroundColor: "rgba(255,99,132,0.4)",
+                hoverBorderColor: "rgba(255,99,132,1)",
+                data: dataProfit,
+            },
+            {
+                label: "Expenses",
+                backgroundColor: "rgba(75,192,192,0.4)",
+                borderColor: "orange",
+                borderWidth: 1,
+                hoverBackgroundColor: "rgba(255,99,132,0.4)",
+                hoverBorderColor: "rgba(255,99,132,1)",
+                data: dataExpenses,
+            },
+            {
+                label: "Revenue",
+                backgroundColor: "rgba(75,192,192,0.4)",
+                borderColor: "red",
+                borderWidth: 1,
+                hoverBackgroundColor: "rgba(255,99,132,0.4)",
+                hoverBorderColor: "rgba(255,99,132,1)",
+                data: dataRevenue,
+            },
+        ],
+    };
+
     //  Move to a config file?
     const lineData = {
         labels: labelsDate,
         datasets: [
             {
-                label: "Gross Profits",
+                label: "Profits",
                 fill: false,
                 lineTension: 0.1,
                 backgroundColor: "rgba(75,192,192,0.4)",
