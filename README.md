@@ -70,7 +70,7 @@ An app designed with health and fitness in mind. Capable of tracking a users cal
 
 ## Videos
 
-# ![Analyze-Fit-Demo-vid](https://user-images.githubusercontent.com/49554888/88095529-464eed80-cb63-11ea-9818-74542a140a12.gif)
+# ![Screen-Recording-2020-07-23-at-1](https://user-images.githubusercontent.com/59983319/88329444-93f86100-ccef-11ea-9c27-8d26ee5b4c75.gif)
 
 ## Getting-Started
 
