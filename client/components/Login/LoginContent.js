@@ -34,7 +34,7 @@ class LoginContent extends React.Component {
 
   handleLoginPost = () => {
     axios
-      .post("http://localhost:3001/api/login", {
+      .post("https://bi-cube.herokuapp.com/api/login", {
         username: this.state.user.username,
         password: this.state.user.password,
       })
@@ -61,7 +61,7 @@ class LoginContent extends React.Component {
   };
 
   handleGuestPost = () => {
-    axios.post("http://localhost:3001/api/guest-login", {}).then((response) => {
+    axios.post("https://bi-cube.herokuapp.com/api/guest-login", {}).then((response) => {
       if (response.data.success) {
         const token = response.data.token;
         localStorage.setItem("jsonwebtoken", token);

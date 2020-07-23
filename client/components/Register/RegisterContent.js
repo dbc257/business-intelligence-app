@@ -1,5 +1,5 @@
 import React from "react";
-import Router from "next/Router";
+import Router from "next/router";
 // import loginImg from "../../public/images/login.svg";
 
 class RegisterContent extends React.Component {
@@ -20,7 +20,7 @@ class RegisterContent extends React.Component {
   };
 
   handleRegisterPost = () => {
-    fetch("http://localhost:3001/register", {
+    fetch("https://bi-cube.herokuapp.com/register", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
