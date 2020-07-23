@@ -94,7 +94,7 @@ An app designed with health and fitness in mind. Capable of tracking a users cal
 
 ## Getting-Started
 
-Feel free to fork it and tweak it to your likings. This is a basic quick build with many paths that are open to your exploration. Otherwise to try it out clone the repo to your local machine or download the zip.
+Feel free to fork the project and change it to your likings. Try it out by cloning the repo to your local machine or download the zip.
 
 ## Prerequisites
 
