@@ -206,6 +206,12 @@ const Company = () => {
             width: 50%;
             float: left;
           }
+          .chart-wrapper {
+            max-height: 75px;
+          }
+          .chart-container {
+            max-height: 75px;
+          }
           .row:after {
             content: "";
             display: table;
