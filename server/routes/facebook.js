@@ -59,6 +59,7 @@ router.get("/", (req, res) => {
         { symbol: "FB", date: "2017-09-30" },
         { symbol: "FB", date: "2017-06-30" },
         { symbol: "FB", date: "2017-03-31" },
+        { symbol: "FB", date: "2020-03-31" },
       ],
     },
   }).then((result) => res.json(result));

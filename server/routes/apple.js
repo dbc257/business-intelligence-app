@@ -62,6 +62,7 @@ router.get("/", (req, res) => {
         { symbol: "AAPL", date: "2017-09-30" },
         { symbol: "AAPL", date: "2017-07-01" },
         { symbol: "AAPL", date: "2017-04-01" },
+        { symbol: "AAPL", date: "2020-03-28" },
       ],
     },
   }).then((result) => {
