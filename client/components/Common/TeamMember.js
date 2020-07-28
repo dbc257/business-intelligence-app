@@ -18,7 +18,7 @@ class TeamMember extends Component {
                   <img src="/images/team/team1.jpg" alt="team" />
 
                   <div className="team-social">
-                    <Link href="//linkedin.com/in/david-c-48287133/">
+                    <Link href="//linkedin.com/in/dbc257/">
                       <a target="_blank">
                         <i className="fab fa-linkedin"></i>
                       </a>
