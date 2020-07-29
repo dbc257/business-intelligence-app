@@ -61,8 +61,8 @@ An app designed with health and fitness in mind. Capable of tracking a users cal
 
 ## Screenshots
 
-<!-- ![Screen Shot 2020-07-22 at 9 05 12 PM](https://user-images.githubusercontent.com/62611599/88332622-75e12f80-ccf4-11ea-816e-9af2c7a0b3bf.png) -->
-<img width="1425" alt="Home Page" src="https://user-images.githubusercontent.com/62611599/88332622-75e12f80-ccf4-11ea-816e-9af2c7a0b3bf.png">
+<!-- ![Screen Shot 2020-07-29 at 1 53 07 PM](https://user-images.githubusercontent.com/62611599/88841154-2642ae00-d1a3-11ea-8fff-138276b24944.png) -->
+<img width="1425" alt="Home Page" src="https://user-images.githubusercontent.com/62611599/88841154-2642ae00-d1a3-11ea-8fff-138276b24944.png">
 
 <!-- ![Screen Shot 2020-07-23 at 2 28 48 PM](https://user-images.githubusercontent.com/62611599/88334193-06207400-ccf7-11ea-870a-590d5439081a.png) -->
 
