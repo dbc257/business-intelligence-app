@@ -13,8 +13,6 @@ The Business Intelligence (BI) App enables users to access business information 
 - :star: [Prerequisites](#prerequisites)
 - :star: [Installing](#installing)
 - :star: [Built With](#built-with)
-  <!-- - :star: [I TIP MY HAT TO](#i-tip-my-hat-to) -->
-  <!-- - :star: [License](#license) -->
 - :star: [Contributors](#contributors)
 
 ## Website-Link
