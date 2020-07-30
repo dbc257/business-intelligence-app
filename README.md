@@ -134,7 +134,7 @@ $ code .
 - React.js
 - Next.js
 - Redux
-- react-cartjs-2
+- react-chartjs-2
 - Syntactically Awesome Style Sheets (Sass)
 - Cascading Style Sheets (CSS)
 - JSON Web Tokens
