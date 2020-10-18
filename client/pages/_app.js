@@ -46,6 +46,8 @@ class WrappedApp extends App {
       <React.Fragment>
         <Head>
           <title>BI App - Business Intelligence App</title>
+          <meta property='og:image' content='/images/BIA.png'></meta>
+          <meta property='og:url' content='//business-intelligence-app.vercel.app/'></meta>
           <meta
             name="description"
             content="BI App - Business Intelligence App"
@@ -59,8 +61,7 @@ class WrappedApp extends App {
             name="twitter:card"
             content="BI App - Business Intelligence App"
           ></meta>
-          <meta property='og:image' content='../public/images/BIA.png'></meta>
-          <meta property='og:url' content='//https://business-intelligence-app.vercel.app/'/>
+          
         </Head>
 
         <Component {...pageProps} />
