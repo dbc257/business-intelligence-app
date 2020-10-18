@@ -15,8 +15,6 @@ class Navbar extends Component {
     collapsed: true,
   };
   handleSignOut = () => {
-    // props.onAuthenticated(false);
-    console.log("hello world");
     this.props.authenticated(false);
     localStorage.removeItem("jsonwebtoken");
     localStorage.removeItem("jwt_access_token");

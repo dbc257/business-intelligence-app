@@ -59,6 +59,8 @@ class WrappedApp extends App {
             name="twitter:card"
             content="BI App - Business Intelligence App"
           ></meta>
+          <meta property='og:image' content='../public/images/BIA.png'></meta>
+          <meta property='og:url' content='//https://business-intelligence-app.vercel.app/'/>
         </Head>
 
         <Component {...pageProps} />
