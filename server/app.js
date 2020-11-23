@@ -88,7 +88,7 @@ app.post("/api/login", (req, res) => {
             // console.log(persistedUser)
             const token = jwt.sign(
               { username: username, id: persistedUser.id },
-              "keyboard cat"
+              process.env.JWT_PASSWORD
             );
             // console.log(token);
             res.json({
