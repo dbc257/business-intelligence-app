@@ -1,2 +1,1 @@
-export const BUTTON_CHOSEN = "BUTTON_CHOSEN";
 export const AUTHENTICATED = "AUTHENTICATED";

@@ -1,14 +1,12 @@
 import React, { Component } from "react";
 import Link from "../../utils/ActiveLink";
 import Button from "react-bootstrap/Button";
-// import Link from "next/Link";
 import { setAuthenticationHeader } from "../../utils/Auth";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import { authenticated } from "../../store/login/action";
 
 class Navbar extends Component {
-  // Navbar
   _isMounted = false;
   state = {
     display: false,
@@ -60,16 +58,13 @@ class Navbar extends Component {
                     <div className="white-logo">
                       <img
                         src="/images/logo-white.png"
-                        // className="white-logo"
                         alt="logo"
                       />{" "}
                       <label>BI App</label>
                     </div>
                     <div className="black-logo">
-                      {/* <label className="white-logo">BI App</label> */}
                       <img
                         src="/images/logo-white.png"
-                        // className="black-logo"
                         alt="logo"
                       />{" "}
                       <label>BI App</label>
@@ -108,11 +103,6 @@ class Navbar extends Component {
                         </Link>
                       </Button>
                     </li>
-                    {/* <li className="nav-item">
-                      <Link href="/charts" activeClassName="active">
-                        <a className="nav-link">Charts</a>
-                      </Link>
-                    </li> */}
                     <li className="nav-item">
                       <Button variant="link" size="sm" className="nav-link">
                         <Link href="/about-us" activeClassName="active">
@@ -129,7 +119,6 @@ class Navbar extends Component {
                         </Button>
                       </li>
                     ) : null}
-
                     {this.props.isLoggedIn == false ? (
                       <li className="nav-item">
                         <Button variant="link" size="sm" className="nav-link">
@@ -152,35 +141,6 @@ class Navbar extends Component {
                         </Link>
                       </li>
                     )}
-                    {/* <li className="nav-item">
-                      <Link href="/" activeClassName="active">
-                      <Button
-                        variant="link"
-                        size="sm"
-                        onClick={this.handleSignOut}
-                        className="nav-link"
-                      >
-                        <a className="nav-link">Signout</a>
-                      </Button>
-                      </Link>
-                    </li> */}
-
-                    {/* <li className="nav-item">
-                      <Link
-                        href="/register"
-                        activeClassName="active"
-                        onClick={this.handleSignOut}
-                      >
-                        {/* <button
-                        // href="/"
-                        // activeClassName="active"
-                        // type="button"
-                        onClick={this.handleSignOut}
-                      > 
-                        <a className="nav-link">Signout</a>
-                         </button>
-                      </Link>
-                    </li> */}
                   </ul>
                 </div>
               </nav>
@@ -192,21 +152,6 @@ class Navbar extends Component {
   }
 }
 
-// const mapStateToProps = (state) => {
-//   return {
-//     isLoggedIn: state.loginRed.isLoggedIn,
-//   };
-// };
-
-// const mapDispatchToProps = (dispatch) => {
-//   return {
-//     onAuthenticated: (isLoggedIn) =>
-//       dispatch(actionCreators.authenticated(isLoggedIn)),
-//   };
-// };
-// export default connect(mapStateToProps, mapDispatchToProps)(Navbar);
-
-// export default Navbar;
 const mapStateToProps = (state) => {
   return {
     isLoggedIn: state.login.isLoggedIn,

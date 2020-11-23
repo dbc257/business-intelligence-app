@@ -62,7 +62,7 @@ app.post("/register", (req, res) => {
     }
   });
 });
-
+// POST route to login a user
 app.post("/api/login", (req, res) => {
   let username = req.body.username;
   let password = req.body.password;
@@ -85,12 +85,10 @@ app.post("/api/login", (req, res) => {
       } else {
         if (persistedUser) {
           if (bcrypt.compareSync(password, persistedUser.password)) {
-            // console.log(persistedUser)
             const token = jwt.sign(
               { username: username, id: persistedUser.id },
               process.env.JWT_PASSWORD
             );
-            // console.log(token);
             res.json({
               message: "You are now logged in! ",
               success: true,
@@ -105,7 +103,7 @@ app.post("/api/login", (req, res) => {
       }
     });
 });
-
+// POST route to login a guest user
 app.post("/api/guest-login", (req, res) => {
   let username = process.env.REACT_APP_USERNAME;
   let password = process.env.REACT_APP_PASSWORD;
@@ -132,7 +130,6 @@ app.post("/api/guest-login", (req, res) => {
               { username: username },
               process.env.JWT_PASSWORD
             );
-            // console.log(token);
             res.json({
               message: "You are now logged in! ",
               success: true,
@@ -151,7 +148,6 @@ app.post("/api/guest-login", (req, res) => {
 app.post("/chart-data", (req, res) => {
   req.body.map(async (dummy) => {
     const currentSessionId = req.session.user;
-
     await models.Company.create({
       symbol: dummy.symbol,
       date: dummy.date,
@@ -166,24 +162,8 @@ app.post("/chart-data", (req, res) => {
 app.post("/api/data", (req, res) => {
   let csvData = req.body;
   let token = req.headers["authorization"].split(" ")[1];
-
   const decoded = jwt.verify(token, process.env.JWT_PASSWORD);
-
   let user_id = decoded.id;
-
-  // console.log(csvData)
-
-  // let headers = keys[0].join(", ")
-  // let tableHeaders = `(userId, ${headers})`
-  // console.log(tableHeaders)
-  // let values = keys.map((ele, i) => i + 2 )
-  // console.log(values)
-
-  // var test = JSON.parse(csvData);
-  // console.log(test)
-
-  console.log(typeof csvData);
-
   let formattedCsvData = csvData.map((element) => {
     return {
       revenue: element["Revenue"],
@@ -194,14 +174,6 @@ app.post("/api/data", (req, res) => {
       user_id: user_id,
     };
   });
-
-  // csvData = csvData.map((ele) => {
-  //     console.log(ele)
-  //     revenue: element["Revenue"],
-  // })
-
-  console.log(formattedCsvData);
-
   models.SavedData.bulkCreate(formattedCsvData);
 });
 

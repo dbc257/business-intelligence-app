@@ -1,7 +1,4 @@
 import React, { Component } from "react";
-import Link from "next/link";
-import dynamic from "next/dynamic";
-// const OwlCarousel = dynamic(import('react-owl-carousel3'));
 
 const options = {
   loop: true,
@@ -47,34 +44,6 @@ class CustomerStyleTwo extends Component {
     return (
       <div className="partner-area">
         <div className="container">
-          {/* {this.state.display ? <OwlCarousel 
-                        className="partner-slider owl-carousel owl-theme"
-                            {...options}
-                        >
-                        <div className="partner-item">
-                            <Link href="/partner">
-                                <a>
-                                    <img src="/images/partner/partner2.png" alt="image" />
-                                </a>
-                            </Link>
-                        </div>
-
-                        <div className="partner-item">
-                            <Link href="/partner">
-                                <a>
-                                    <img src="/images/partner/partner3.png" alt="image" />
-                                </a>
-                            </Link>
-                        </div>
-
-                        <div className="partner-item">
-                            <Link href="/partner">
-                                <a>
-                                    <img src="/images/partner/partner5.png" alt="image" />
-                                </a>
-                            </Link>
-                        </div>
-                    </OwlCarousel> : ''} */}
         </div>
       </div>
     );

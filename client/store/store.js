@@ -2,7 +2,6 @@ import { createStore, applyMiddleware, combineReducers } from "redux";
 import { HYDRATE, createWrapper } from "next-redux-wrapper";
 import thunkMiddleware from "redux-thunk";
 import login from "./login/reducer";
-import company from "./company/reducer";
 
 const bindMiddleware = (middleware) => {
   if (process.env.NODE_ENV !== "production") {
@@ -14,20 +13,17 @@ const bindMiddleware = (middleware) => {
 
 const combinedReducer = combineReducers({
   login,
-  // company,
 });
-// const reducer = { login };
 
 const reducer = (state, action) => {
   if (action.type === HYDRATE) {
     const nextState = {
-      ...state, // use previous state
-      ...action.payload, // apply delta from hydration
+      ...state, 
+      ...action.payload, 
     };
-    if (state.login) nextState.login = state.login; // preserve count value on client side navigation
+  if (state.login) nextState.login = state.login; 
     return nextState;
   } else {
-    // return combinedReducer(state, action);
     return combinedReducer(state, action);
   }
 };

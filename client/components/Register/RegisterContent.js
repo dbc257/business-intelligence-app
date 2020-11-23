@@ -1,6 +1,5 @@
 import React from "react";
 import Router from "next/router";
-// import loginImg from "../../public/images/login.svg";
 
 class RegisterContent extends React.Component {
   constructor(props) {
@@ -36,8 +35,6 @@ class RegisterContent extends React.Component {
 
   render() {
     return (
-      // <section className="subscribe-section p-0">
-      // <div className="container">
       <div className="subscribe-content-area mb-0">
         <div className="row align-items-center">
           <div className="col-lg-6 col-md-6">
@@ -45,7 +42,6 @@ class RegisterContent extends React.Component {
               <img src="/images/subscribe.png" alt="image" />
             </div>
           </div>
-
           <div className="col-lg-6 col-md-6">
             <div className="subscribe-content">
               <h2>Register</h2>
@@ -61,7 +57,7 @@ class RegisterContent extends React.Component {
                   required
                 />
               </div>
-              <br></br>
+              <br/>
               <div className="newsletter-form">
                 <input
                   onChange={this.handleRegister}
@@ -72,7 +68,7 @@ class RegisterContent extends React.Component {
                   required
                 />
               </div>
-              <br></br>
+              <br/>
               <div className="newsletter-form">
                 <button
                   onClick={this.handleRegisterPost}
@@ -83,12 +79,9 @@ class RegisterContent extends React.Component {
                 </button>
               </div>
             </div>
-            {/* </form> */}
           </div>
         </div>
       </div>
-      // </div>
-      // </section>
     );
   }
 }

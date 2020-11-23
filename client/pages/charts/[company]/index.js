@@ -9,13 +9,11 @@ import { useRouter } from "next/router";
 const Company = () => {
   const router = useRouter();
   const { company } = router.query;
-
   const [financials, setFinancials] = useState([]);
   const [companyName, setCompanyName] = useState("");
 
   useEffect(() => {
     fetch(`https://bi-cube.herokuapp.com/${company}`)
-      // fetch(`http://localhost:3001/${company}`)
       .then((response) => response.json())
       .then((result) => {
         let data = result.sort(function (a, b) {
@@ -24,7 +22,6 @@ const Company = () => {
           return aa < bb ? -1 : aa > bb ? 1 : 0;
         });
         setFinancials(data);
-
         let companyLetter = company.charAt(0).toUpperCase();
         setCompanyName(companyLetter + company.slice(1));
       });
@@ -79,7 +76,6 @@ const Company = () => {
     ],
   };
 
-  //  Move to a config file?
   const lineData = {
     labels: labelsDate,
     datasets: [
