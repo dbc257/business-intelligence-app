@@ -2,11 +2,6 @@
   "/_app": "pages/_app.js",
   "/_document": "pages/_document.js",
   "/_error": "pages/_error.js",
-  "/404": "pages/404.js",
-  "/about-us": "pages/about-us.js",
   "/explore": "pages/explore.js",
-  "/charts/[company]": "pages/charts/[company].js",
-  "/": "pages/index.js",
-  "/charts/[company]/[year]": "pages/charts/[company]/[year].js",
-  "/login": "pages/login.js"
+  "/charts/[company]": "pages/charts/[company].js"
 }

@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import Link from "next/link";
-// import ModalVideo from 'react-modal-video';
 
 class MainBanner extends Component {
   state = {
@@ -33,28 +32,9 @@ class MainBanner extends Component {
                           Explore <span></span>
                         </a>
                       </Link>
-
-                      {/* <Link href="#play-video">
-                                                <a
-                                                    onClick={e => {e.preventDefault(); this.openModal()}}
-                                                    className="video-btn popup-youtube"
-                                                > 
-                                                    <i className="fa fa-play"></i>
-                                                    Watch Video
-                                                </a> 
-                                            </Link> */}
                     </div>
                   </div>
                 </div>
-
-                {/* If you want to change the video need to update below videoID */}
-                {/* <ModalVideo
-                  channel="youtube"
-                  isOpen={this.state.isOpen}
-                  videoId="_ysd-zHamjk"
-                  onClose={() => this.setState({ isOpen: false })}
-                /> */}
-
                 <div className="col-lg-6 col-md-12">
                   <div className="banner-image">
                     <img src="/images/home-four/main-image4.png" alt="image" />
@@ -64,7 +44,6 @@ class MainBanner extends Component {
             </div>
           </div>
         </div>
-
         <div className="creative-shape">
           <img src="/images/main-banner-shape/home-shape-4.png" alt="image" />
         </div>
