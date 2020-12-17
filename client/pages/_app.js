@@ -3,18 +3,13 @@ import "../public/css/bootstrap.min.css";
 import "../public/css/animate.min.css";
 import "../public/css/flaticon.css";
 import "../public/css/fontawesome.min.css";
-// import '../node_modules/react-modal-video/css/modal-video.min.css';
 import "react-accessible-accordion/dist/fancy-example.css";
 import "../public/css/style.css";
 import "../public/css/responsive.css";
-// import "../scss/LoginPage.scss";
 
 import App from "next/app";
 import Head from "next/head";
 import Loader from "../components/Shared/Loader";
-import GoTop from "../components/Shared/GoTop";
-
-// export default
 
 class WrappedApp extends App {
   static async getInitialProps({ Component, ctx }) {
@@ -24,7 +19,6 @@ class WrappedApp extends App {
         : {},
     };
   }
-
   // Preloader
   state = {
     loading: true,
@@ -41,7 +35,6 @@ class WrappedApp extends App {
 
   render() {
     const { Component, pageProps } = this.props;
-    // const WrappedApp = ({ Component, pageProps }) => {
     return (
       <React.Fragment>
         <Head>
@@ -61,23 +54,13 @@ class WrappedApp extends App {
             name="twitter:card"
             content="BI App - Business Intelligence App"
           ></meta>
-          
         </Head>
-
         <Component {...pageProps} />
-
         {/* Preloader */}
         <Loader loading={this.state.loading} />
-
-        {/* Go Top Button */}
-        <GoTop scrollStepInPx="50" delayInMs="10.50" />
       </React.Fragment>
     );
   }
 }
-
-// const WrappedApp = ({ Component, pageProps }) => {
-//   return <Component {...pageProps} />
-// }
 
 export default wrapper.withRedux(WrappedApp);

@@ -35,10 +35,6 @@ class AboutUsContent extends Component {
                     <i className="flaticon-tick"></i>
                     Pie Charts
                   </li>
-                  {/* <li>
-                    <i className="flaticon-tick"></i>
-                    Advanced Advisory Team
-                  </li> */}
                 </ul>
               </div>
             </div>

@@ -31,16 +31,7 @@ class AboutUs extends Component {
                     <i className="flaticon-tick"></i>
                     Bar Charts
                   </li>
-                  {/* <li>
-                    <i className="flaticon-tick"></i>
-                    Pie Charts
-                  </li> */}
-                  {/* <li>
-                    <i className="flaticon-tick"></i>
-                    Advanced Advisory Team
-                  </li> */}
                 </ul>
-
                 <Link href="/about-us">
                   <a className="default-btn">
                     Read More <span></span>
